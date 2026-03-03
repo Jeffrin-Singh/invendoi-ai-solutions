@@ -18,8 +18,8 @@ export default function ServiceDetail() {
             <section className="py-16 sm:py-20">
                 <Container>
                     <Card className="p-8">
-                        <div className="font-display text-2xl text-white">Service not found</div>
-                        <p className="mt-2 text-sm text-slate-300/80">
+                        <div className="font-display text-2xl text-slate-900">Service not found</div>
+                        <p className="mt-2 text-sm text-slate-600">
                             Please go back to Services and choose a valid service.
                         </p>
                         <div className="mt-5">
@@ -45,10 +45,10 @@ export default function ServiceDetail() {
             <section className="py-16 sm:py-20">
                 <Container>
                     <Reveal>
-                        <div className="flex items-center gap-2 text-sm text-slate-300/70">
-                            <Link className="hover:text-white" to="/services">Services</Link>
+                        <div className="flex items-center gap-2 text-sm text-slate-500">
+                            <Link className="hover:text-slate-900" to="/services">Services</Link>
                             <span>/</span>
-                            <span className="text-slate-200/90">{service.title}</span>
+                            <span className="text-slate-800 font-medium">{service.title}</span>
                         </div>
 
                         <div className="mt-4 grid gap-10 lg:grid-cols-12 lg:items-start">
@@ -59,10 +59,10 @@ export default function ServiceDetail() {
                                     ))}
                                 </div>
 
-                                <h1 className="mt-4 font-display text-3xl sm:text-4xl text-white">
+                                <h1 className="mt-4 font-display text-3xl sm:text-4xl text-slate-900">
                                     {service.title}
                                 </h1>
-                                <p className="mt-4 text-base text-slate-300/85 leading-relaxed">
+                                <p className="mt-4 text-base text-slate-600 leading-relaxed">
                                     {service.short}
                                 </p>
 
@@ -77,15 +77,15 @@ export default function ServiceDetail() {
 
                                 <div className="mt-10 grid gap-4">
                                     <Card className="p-6">
-                                        <div className="font-display text-xl text-white">The problem</div>
-                                        <p className="mt-2 text-sm text-slate-300/80 leading-relaxed">
+                                        <div className="font-display text-xl text-slate-900">The problem</div>
+                                        <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             {service.details.problem}
                                         </p>
                                     </Card>
 
                                     <Card className="p-6">
-                                        <div className="font-display text-xl text-white">Our approach</div>
-                                        <p className="mt-2 text-sm text-slate-300/80 leading-relaxed">
+                                        <div className="font-display text-xl text-slate-900">Our approach</div>
+                                        <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             {service.details.solution}
                                         </p>
                                     </Card>
@@ -93,25 +93,25 @@ export default function ServiceDetail() {
                             </div>
 
                             <div className="lg:col-span-5">
-                                <Card className="overflow-hidden">
+                                <Card className="overflow-hidden border-white/40 shadow-xl">
                                     <div className="relative h-56 sm:h-72">
-                                        <img src={service.image} alt={service.title} className="h-full w-full object-cover opacity-90" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+                                        <img src={service.image} alt={service.title} className="h-full w-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
                                     </div>
                                     <div className="p-6">
-                                        <div className="font-display text-lg text-white">Deliverables</div>
+                                        <div className="font-display text-lg text-slate-900">Deliverables</div>
                                         <ul className="mt-4 space-y-3">
                                             {service.details.deliverables.map((d) => (
-                                                <li key={d} className="flex gap-3 text-sm text-slate-300/80">
-                                                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-cyan-300" />
+                                                <li key={d} className="flex gap-3 text-sm text-slate-600">
+                                                    <CheckCircle2 className="mt-0.5 h-4 w-4 text-cyan-600" />
                                                     <span>{d}</span>
                                                 </li>
                                             ))}
                                         </ul>
 
-                                        <div className="mt-6 border-t border-white/10 pt-5">
-                                            <div className="font-display text-lg text-white">Expected outcomes</div>
-                                            <ul className="mt-3 space-y-2 text-sm text-slate-300/80">
+                                        <div className="mt-6 border-t border-slate-100 pt-5">
+                                            <div className="font-display text-lg text-slate-900">Expected outcomes</div>
+                                            <ul className="mt-3 space-y-2 text-sm text-slate-600">
                                                 {service.details.outcomes.map((o) => (
                                                     <li key={o}>• {o}</li>
                                                 ))}

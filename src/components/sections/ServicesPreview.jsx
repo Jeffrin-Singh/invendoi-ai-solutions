@@ -38,23 +38,23 @@ export default function ServicesPreview() {
                                         <img
                                             src={s.image}
                                             alt={s.title}
-                                            className="h-full w-full object-cover opacity-90"
+                                            className="h-full w-full object-cover"
                                             loading="lazy"
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent" />
                                         <div className="absolute bottom-3 left-4 right-4">
-                                            <div className="font-display text-lg text-white">{s.title}</div>
+                                            <div className="font-display text-lg text-slate-900">{s.title}</div>
                                         </div>
                                     </div>
 
                                     <div className="p-5">
-                                        <p className="text-sm text-slate-300/80 leading-relaxed">
+                                        <p className="text-sm text-slate-600 leading-relaxed">
                                             {s.short}
                                         </p>
 
                                         <ul className="mt-4 space-y-2">
                                             {s.highlights.map((h) => (
-                                                <li key={h} className="text-xs text-slate-200/75">
+                                                <li key={h} className="text-xs text-slate-500">
                                                     • {h}
                                                 </li>
                                             ))}

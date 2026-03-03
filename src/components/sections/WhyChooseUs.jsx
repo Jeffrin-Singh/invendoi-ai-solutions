@@ -22,8 +22,8 @@ export default function WhyChooseUs() {
                         <Reveal key={item} delay={idx * 0.04}>
                             <Card className="p-5">
                                 <div className="flex gap-3">
-                                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />
-                                    <div className="text-sm text-slate-200/85 leading-relaxed">{item}</div>
+                                    <CheckCircle2 className="mt-0.5 h-5 w-5 text-indigo-600" />
+                                    <div className="text-sm text-slate-700 leading-relaxed">{item}</div>
                                 </div>
                             </Card>
                         </Reveal>

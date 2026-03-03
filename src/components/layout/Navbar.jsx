@@ -8,13 +8,12 @@ const nav = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
-    { to: "/projects", label: "Projects" },
     { to: "/case-studies", label: "Portfolio" },
     { to: "/contact", label: "Contact" },
 ];
 
-const linkBase = "text-sm text-slate-200/80 hover:text-white transition-colors";
-const active = "text-white";
+const linkBase = "text-sm text-slate-700 hover:text-slate-900 transition-colors";
+const active = "text-slate-900 font-semibold";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
@@ -29,13 +28,13 @@ export default function Navbar() {
 
     return (
         <header className="sticky top-0 z-50">
-            <div className="bg-slate-950/70 backdrop-blur-md border-b border-white/10">
+            <div className="bg-white/70 backdrop-blur-md border-b border-slate-200/70">
                 <Container className="flex h-16 items-center justify-between">
                     <Link to="/" onClick={handleNavigate} className="flex items-center gap-2">
                         <img src="/logo.png" alt="Invendoi Logo" className="h-9 w-9 object-contain" />
                         <div className="leading-tight">
-                            <div className="font-display text-sm text-white">Invendoi</div>
-                            <div className="text-[11px] text-slate-300/70">AI Solutions</div>
+                            <div className="font-display text-sm text-slate-900">Invendoi</div>
+                            <div className="text-[11px] text-slate-600">AI Solutions</div>
                         </div>
                     </Link>
 
@@ -62,7 +61,7 @@ export default function Navbar() {
                     </div>
 
                     <button
-                        className="md:hidden inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 p-2 text-white"
+                        className="md:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white p-2 text-slate-900"
                         onClick={() => setOpen((v) => !v)}
                         aria-label="Toggle menu"
                     >
@@ -71,7 +70,7 @@ export default function Navbar() {
                 </Container>
 
                 {open && (
-                    <div className="md:hidden border-t border-white/10 bg-slate-950/95">
+                    <div className="md:hidden border-t border-slate-200 bg-white/95">
                         <Container className="py-4">
                             <div className="flex flex-col gap-3">
                                 {nav.map((n) => (
@@ -80,7 +79,7 @@ export default function Navbar() {
                                         to={n.to}
                                         onClick={handleNavigate}
                                         className={({ isActive }) =>
-                                            `rounded-xl px-3 py-2 text-sm ${isActive ? "bg-white/10 text-white" : "text-slate-200/80 hover:bg-white/5"
+                                            `rounded-xl px-3 py-2 text-sm ${isActive ? "bg-slate-100 text-slate-900" : "text-slate-700 hover:bg-slate-50"
                                             }`
                                         }
                                     >

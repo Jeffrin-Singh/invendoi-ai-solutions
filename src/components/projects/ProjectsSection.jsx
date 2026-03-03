@@ -28,7 +28,7 @@ export default function ProjectsSection() {
     }, [activeFilter]);
 
     return (
-        <section className="py-20 border-t border-white/5 bg-slate-950/50">
+        <section className="py-20 border-t border-slate-200/60 bg-slate-50/50">
             <Container>
                 <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
                     <div className="max-w-2xl">
@@ -51,22 +51,21 @@ export default function ProjectsSection() {
                                         "relative whitespace-nowrap rounded-full px-5 py-2.5 text-xs font-medium transition-colors duration-300 outline-none",
                                         isActive
                                             ? "text-white"
-                                            : "text-slate-400 hover:text-slate-200"
+                                            : "text-slate-500 hover:text-slate-900"
                                     )}
                                 >
                                     {/* Active Background - Slides between buttons */}
                                     {isActive && (
                                         <motion.div
                                             layoutId="activeFilter"
-                                            className="absolute inset-0 bg-indigo-500/15 border border-indigo-400/40 rounded-full"
-                                            style={{ boxShadow: '0 0 20px rgba(99, 102, 241, 0.15)' }}
+                                            className="absolute inset-0 bg-indigo-600 rounded-full"
                                             transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                         />
                                     )}
 
-                                    {/* Glass Base for Inactive */}
+                                    {/* Base for Inactive */}
                                     {!isActive && (
-                                        <div className="absolute inset-0 border border-white/5 rounded-full bg-white/[0.03]" />
+                                        <div className="absolute inset-0 border border-slate-200 rounded-full bg-white shadow-sm" />
                                     )}
 
                                     <span className="relative z-10">{chip}</span>
@@ -106,15 +105,15 @@ export default function ProjectsSection() {
                                 animate={{ opacity: 1, y: 0 }}
                                 className="py-32 text-center"
                             >
-                                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/5 mb-4">
-                                    <svg className="w-8 h-8 text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 mb-4">
+                                    <svg className="w-8 h-8 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                                     </svg>
                                 </div>
                                 <p className="text-slate-500 font-display text-lg">No projects match this category.</p>
                                 <button
                                     onClick={() => setActiveFilter("All")}
-                                    className="mt-4 text-indigo-400 text-sm hover:underline"
+                                    className="mt-4 text-indigo-600 text-sm hover:underline"
                                 >
                                     Clear all filters
                                 </button>

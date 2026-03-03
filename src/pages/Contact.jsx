@@ -35,8 +35,8 @@ export default function Contact() {
                     <div className="mt-10 grid gap-6 lg:grid-cols-12 items-stretch">
                         <Reveal className="lg:col-span-7 h-full" boxClassName="h-full">
                             <Card className="p-8 h-full flex flex-col">
-                                <div className="font-display text-2xl text-white">Send a message</div>
-                                <p className="mt-3 text-sm text-slate-300/70 leading-relaxed">
+                                <div className="font-display text-2xl text-slate-900">Send a message</div>
+                                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                                     Have a specific environment or scale in mind? Tell us about your cameras, drones, or locations, and we'll prepare a tailored deployment architecture.
                                 </p>
 
@@ -46,7 +46,7 @@ export default function Contact() {
                                             name="name"
                                             value={form.name}
                                             onChange={onChange}
-                                            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                                             placeholder="Full name"
                                         />
                                     </Field>
@@ -55,7 +55,7 @@ export default function Contact() {
                                             name="email"
                                             value={form.email}
                                             onChange={onChange}
-                                            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                                             placeholder="name@company.com"
                                         />
                                     </Field>
@@ -64,7 +64,7 @@ export default function Contact() {
                                             name="org"
                                             value={form.org}
                                             onChange={onChange}
-                                            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
+                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
                                             placeholder="Department / Company"
                                         />
                                     </Field>
@@ -75,7 +75,7 @@ export default function Contact() {
                                                 value={form.message}
                                                 onChange={onChange}
                                                 rows={5}
-                                                className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
+                                                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
                                                 placeholder="Example: 200+ cameras across 10 zones, need geo-tagged violations + evidence workflow..."
                                             />
                                         </Field>
@@ -97,40 +97,40 @@ export default function Contact() {
 
                         <Reveal delay={0.1} className="lg:col-span-5 h-full" boxClassName="h-full">
                             <Card className="p-8 h-full flex flex-col">
-                                <div className="font-display text-2xl text-white">Direct contact</div>
+                                <div className="font-display text-2xl text-slate-900">Direct contact</div>
 
                                 <div className="mt-6 space-y-6 flex-grow">
                                     <div className="group">
-                                        <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Email</div>
+                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Email</div>
                                         <div className="mt-2 text-sm">
-                                            <a className="text-slate-300 hover:text-white transition-colors block" href={`mailto:${company.emailPrimary}`}>
+                                            <a className="text-slate-600 hover:text-slate-900 transition-colors block" href={`mailto:${company.emailPrimary}`}>
                                                 {company.emailPrimary}
                                             </a>
-                                            <div className="mt-1 text-xs text-slate-400">
+                                            <div className="mt-1 text-xs text-slate-500">
                                                 Proposals: {company.emailAlt}
                                             </div>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Phone</div>
+                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Phone</div>
                                         <div className="mt-2 text-sm">
-                                            <a className="text-slate-300 hover:text-white transition-colors" href={`tel:${company.phone.replace(/\s/g, "")}`}>
+                                            <a className="text-slate-600 hover:text-slate-900 transition-colors" href={`tel:${company.phone.replace(/\s/g, "")}`}>
                                                 {company.phone}
                                             </a>
                                         </div>
                                     </div>
 
                                     <div>
-                                        <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Location</div>
-                                        <div className="mt-2 text-sm text-slate-300 leading-relaxed">
+                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Location</div>
+                                        <div className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             <div>{company.addressLines[0]}</div>
                                             <div>{company.addressLines[1]}</div>
                                         </div>
                                     </div>
 
-                                    <div className="pt-6 border-t border-white/10">
-                                        <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">What to include</div>
+                                    <div className="pt-6 border-t border-slate-200">
+                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">What to include</div>
                                         <ul className="mt-4 space-y-3">
                                             {[
                                                 "Number of cameras/UAVs and locations",
@@ -138,8 +138,8 @@ export default function Contact() {
                                                 "Bandwidth and power availability",
                                                 "Workflow needs (evidence, audit, integrations)"
                                             ].map((item) => (
-                                                <li key={item} className="flex gap-3 text-sm text-slate-300/80">
-                                                    <span className="text-indigo-500 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                                <li key={item} className="flex gap-3 text-sm text-slate-600">
+                                                    <span className="text-indigo-600 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-600 shrink-0" />
                                                     {item}
                                                 </li>
                                             ))}
@@ -158,7 +158,7 @@ export default function Contact() {
 function Field({ label, children, className = "" }) {
     return (
         <label className={cn("block", className)}>
-            <div className="mb-2 text-xs font-semibold text-slate-200/75">{label}</div>
+            <div className="mb-2 text-xs font-semibold text-slate-700">{label}</div>
             {children}
         </label>
     );

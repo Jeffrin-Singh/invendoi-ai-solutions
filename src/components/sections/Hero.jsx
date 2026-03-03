@@ -35,11 +35,11 @@ export default function Hero() {
                             <Badge>Government & Enterprise</Badge>
                         </div>
 
-                        <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-white">
-                            Turn video streams into <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-300 to-fuchsia-400">real-time decisions</span>.
+                        <h1 className="mt-5 font-display text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-slate-900">
+                            Turn video streams into <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-500 to-fuchsia-600">real-time decisions</span>.
                         </h1>
 
-                        <p className="mt-5 text-base sm:text-lg text-slate-300/85 leading-relaxed max-w-2xl">
+                        <p className="mt-5 text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
                             {company.overview}
                         </p>
 
@@ -54,26 +54,26 @@ export default function Hero() {
 
                         <div className="mt-10 grid gap-4 sm:grid-cols-3">
                             <div className="glass rounded-2xl p-4">
-                                <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                                    <ShieldCheck className="h-4 w-4 text-cyan-300" /> Safer Operations
+                                <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                    <ShieldCheck className="h-4 w-4 text-cyan-500" /> Safer Operations
                                 </div>
-                                <div className="mt-2 text-xs text-slate-300/75">
+                                <div className="mt-2 text-xs text-slate-600">
                                     Real-time alerts for threats, safety events, and zone breaches.
                                 </div>
                             </div>
                             <div className="glass rounded-2xl p-4">
-                                <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                                    <Radar className="h-4 w-4 text-indigo-300" /> Field-ready Edge AI
+                                <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                    <Radar className="h-4 w-4 text-indigo-500" /> Field-ready Edge AI
                                 </div>
-                                <div className="mt-2 text-xs text-slate-300/75">
+                                <div className="mt-2 text-xs text-slate-600">
                                     Low-latency inference designed for low bandwidth conditions.
                                 </div>
                             </div>
                             <div className="glass rounded-2xl p-4">
-                                <div className="flex items-center gap-2 text-sm font-semibold text-white">
-                                    <MapPinned className="h-4 w-4 text-fuchsia-300" /> Geo-tagged Evidence
+                                <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+                                    <MapPinned className="h-4 w-4 text-fuchsia-500" /> Geo-tagged Evidence
                                 </div>
-                                <div className="mt-2 text-xs text-slate-300/75">
+                                <div className="mt-2 text-xs text-slate-600">
                                     Mapping overlays and audit-ready evidence workflows.
                                 </div>
                             </div>
@@ -81,26 +81,26 @@ export default function Hero() {
                     </div>
 
                     <div className="lg:col-span-5">
-                        <div className="glass rounded-3xl overflow-hidden">
+                        <div className="glass rounded-3xl overflow-hidden shadow-xl border-white/40">
                             <div className="relative aspect-[4/5]">
                                 <img
-                                    className="absolute inset-0 h-full w-full object-cover opacity-90"
+                                    className="absolute inset-0 h-full w-full object-cover"
                                     alt="AI surveillance and analytics"
                                     src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80"
                                     loading="lazy"
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent" />
                                 <motion.div
                                     initial={reduce ? false : { opacity: 0, y: 12 }}
                                     animate={reduce ? {} : { opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, ease: "easeOut" }}
-                                    className="absolute bottom-5 left-5 right-5 rounded-2xl bg-white/7 backdrop-blur-md border border-white/10 p-4"
+                                    className="absolute bottom-5 left-5 right-5 rounded-2xl glass-strong p-4"
                                 >
-                                    <div className="text-xs text-slate-200/80">Built for scale</div>
-                                    <div className="mt-1 font-display text-lg text-white">
+                                    <div className="text-xs text-slate-500 font-medium">Built for scale</div>
+                                    <div className="mt-1 font-display text-lg text-slate-900">
                                         Large deployments + real-world constraints
                                     </div>
-                                    <div className="mt-2 text-xs text-slate-300/75">
+                                    <div className="mt-2 text-xs text-slate-600 leading-relaxed">
                                         Multi-stream analytics, edge acceleration, and secure portals that fit control-room workflows.
                                     </div>
                                 </motion.div>

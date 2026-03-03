@@ -21,14 +21,14 @@ export default function StatsSection() {
                     {company.stats.map((s, idx) => (
                         <Reveal key={s.label} delay={idx * 0.05}>
                             <Card className="p-5">
-                                <div className="font-display text-3xl text-white">
+                                <div className="font-display text-3xl text-slate-900">
                                     <AnimatedCounter
                                         value={s.value}
                                         suffix={s.suffix}
                                         decimals={s.decimals || 0}
                                     />
                                 </div>
-                                <div className="mt-2 text-sm text-slate-300/75">{s.label}</div>
+                                <div className="mt-2 text-sm text-slate-500">{s.label}</div>
                             </Card>
                         </Reveal>
                     ))}

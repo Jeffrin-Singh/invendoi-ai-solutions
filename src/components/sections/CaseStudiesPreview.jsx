@@ -36,16 +36,16 @@ export default function CaseStudiesPreview() {
                                     <img
                                         src={c.heroImage}
                                         alt={c.title}
-                                        className="h-full w-full object-cover opacity-90"
+                                        className="h-full w-full object-cover"
                                         loading="lazy"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
                                 </div>
 
                                 <div className="p-5">
-                                    <div className="text-xs text-slate-300/70">{c.industry}</div>
-                                    <div className="mt-1 font-display text-lg text-white">{c.title}</div>
-                                    <p className="mt-3 text-sm text-slate-300/80 leading-relaxed">
+                                    <div className="text-xs text-slate-500 font-medium">{c.industry}</div>
+                                    <div className="mt-1 font-display text-lg text-slate-900">{c.title}</div>
+                                    <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                                         {c.summary}
                                     </p>
 

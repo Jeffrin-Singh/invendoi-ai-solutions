@@ -11,8 +11,8 @@ export default function NotFound() {
             <section className="py-16 sm:py-20">
                 <Container>
                     <Card className="p-10 text-center">
-                        <div className="font-display text-3xl text-white">404</div>
-                        <p className="mt-3 text-sm text-slate-300/80">
+                        <div className="font-display text-3xl text-slate-900">404</div>
+                        <p className="mt-3 text-sm text-slate-600">
                             The page you’re looking for doesn’t exist.
                         </p>
                         <div className="mt-6 flex justify-center gap-3">

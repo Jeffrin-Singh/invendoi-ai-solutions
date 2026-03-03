@@ -43,11 +43,11 @@ export default function ProjectDetail() {
                 <Container>
                     {/* Breadcrumbs */}
                     <nav className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500 mb-8 sm:mb-12">
-                        <Link to="/services" className="hover:text-indigo-400 transition-colors">Services</Link>
+                        <Link to="/services" className="hover:text-indigo-600 transition-colors">Services</Link>
                         <ChevronRight className="h-3 w-3" />
                         <span className="text-slate-400">Projects</span>
                         <ChevronRight className="h-3 w-3" />
-                        <span className="text-white truncate max-w-[150px] sm:max-w-none">{title}</span>
+                        <span className="text-slate-900 truncate max-w-[150px] sm:max-w-none">{title}</span>
                     </nav>
 
                     <Reveal>
@@ -55,23 +55,23 @@ export default function ProjectDetail() {
                             <div className="space-y-6 sm:space-y-8">
                                 <div>
                                     <div className="flex flex-wrap gap-3 mb-4">
-                                        <span className="rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white backdrop-blur-md border border-white/10">
+                                        <span className="rounded-full bg-white/60 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-900 backdrop-blur-md border border-white/40 shadow-sm">
                                             {industry}
                                         </span>
-                                        <span className="rounded-full bg-indigo-500/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-300 backdrop-blur-md border border-indigo-500/20">
+                                        <span className="rounded-full bg-indigo-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-indigo-700 backdrop-blur-md border border-indigo-100 shadow-sm">
                                             {status}
                                         </span>
                                     </div>
-                                    <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-white leading-tight">
+                                    <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl text-slate-900 leading-tight">
                                         {title}
                                     </h1>
-                                    <div className="mt-4 flex items-center gap-2 text-slate-400">
+                                    <div className="mt-4 flex items-center gap-2 text-slate-500">
                                         <MapPin className="h-4 w-4" />
                                         <span className="text-sm">{locations.join(", ")}</span>
                                     </div>
                                 </div>
 
-                                <p className="text-lg text-slate-300/80 leading-relaxed font-light">
+                                <p className="text-lg text-slate-600 leading-relaxed font-light">
                                     {summary}
                                 </p>
 
@@ -85,11 +85,11 @@ export default function ProjectDetail() {
                                 </div>
                             </div>
 
-                            <Card className="aspect-[4/3] overflow-hidden group">
+                            <Card className="aspect-[4/3] overflow-hidden group border-white/40 shadow-xl">
                                 <img
                                     src={coverImage}
                                     alt={title}
-                                    className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                             </Card>
                         </div>
@@ -100,11 +100,11 @@ export default function ProjectDetail() {
                         <div className="lg:col-span-2 space-y-16 sm:space-y-20">
                             <Reveal>
                                 <div className="space-y-6">
-                                    <h2 className="font-display text-2xl text-white flex items-center gap-3">
-                                        <Shield className="h-6 w-6 text-indigo-400" /> The Challenge
+                                    <h2 className="font-display text-2xl text-slate-900 flex items-center gap-3">
+                                        <Shield className="h-6 w-6 text-indigo-600" /> The Challenge
                                     </h2>
-                                    <div className="prose prose-invert prose-slate max-w-none">
-                                        <p className="text-slate-300/80 leading-relaxed text-base sm:text-lg italic border-l-2 border-indigo-500/30 pl-6 py-1">
+                                    <div className="prose prose-slate max-w-none">
+                                        <p className="text-slate-600 leading-relaxed text-base sm:text-lg italic border-l-2 border-indigo-200 pl-6 py-1">
                                             "{problem}"
                                         </p>
                                     </div>
@@ -113,18 +113,18 @@ export default function ProjectDetail() {
 
                             <Reveal delay={0.1}>
                                 <div className="space-y-6">
-                                    <h2 className="font-display text-2xl text-white flex items-center gap-3">
-                                        <CheckCircle2 className="h-6 w-6 text-cyan-400" /> What we delivered
+                                    <h2 className="font-display text-2xl text-slate-900 flex items-center gap-3">
+                                        <CheckCircle2 className="h-6 w-6 text-cyan-600" /> What we delivered
                                     </h2>
-                                    <p className="text-slate-300/80 leading-relaxed text-base sm:text-lg">
+                                    <p className="text-slate-600 leading-relaxed text-base sm:text-lg">
                                         {solution}
                                     </p>
 
                                     <div className="grid gap-4 sm:grid-cols-2 mt-8">
                                         {modules.map((module) => (
-                                            <div key={module} className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-white/10 group hover:bg-white/10 transition-colors">
-                                                <div className="mt-1 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
-                                                <span className="text-sm text-slate-300 group-hover:text-white transition-colors">{module}</span>
+                                            <div key={module} className="flex items-start gap-4 p-4 rounded-xl bg-slate-50 border border-slate-200/60 group hover:bg-white transition-colors shadow-sm">
+                                                <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                                <span className="text-sm text-slate-700 group-hover:text-slate-900 transition-colors">{module}</span>
                                             </div>
                                         ))}
                                     </div>
@@ -135,14 +135,14 @@ export default function ProjectDetail() {
                         {/* Right Column: Tech & Impact */}
                         <div className="space-y-12">
                             <Reveal delay={0.2}>
-                                <Card className="p-6 sm:p-8 space-y-6">
-                                    <h2 className="font-display text-xl text-white flex items-center gap-3">
-                                        <Cpu className="h-5 w-5 text-indigo-400" /> Technology Stack
+                                <Card className="p-6 sm:p-8 space-y-6 border-white/40 shadow-lg">
+                                    <h2 className="font-display text-xl text-slate-900 flex items-center gap-3">
+                                        <Cpu className="h-5 w-5 text-indigo-600" /> Technology Stack
                                     </h2>
                                     <ul className="space-y-4">
                                         {stack.map((item) => (
-                                            <li key={item} className="flex items-center gap-3 text-sm text-slate-300">
-                                                <div className="h-1 w-1 rounded-full bg-slate-500" />
+                                            <li key={item} className="flex items-center gap-3 text-sm text-slate-600">
+                                                <div className="h-1.5 w-1.5 rounded-full bg-slate-300" />
                                                 {item}
                                             </li>
                                         ))}
@@ -153,14 +153,14 @@ export default function ProjectDetail() {
                             {metrics && metrics.length > 0 && (
                                 <Reveal delay={0.3}>
                                     <div className="space-y-6">
-                                        <h2 className="font-display text-xl text-white flex items-center gap-3">
-                                            <TrendingUp className="h-5 w-5 text-fuchsia-400" /> Impact & Results
+                                        <h2 className="font-display text-xl text-slate-900 flex items-center gap-3">
+                                            <TrendingUp className="h-5 w-5 text-fuchsia-600" /> Impact & Results
                                         </h2>
                                         <div className="grid gap-4">
                                             {metrics.map((metric, i) => (
-                                                <Card key={i} className="p-5 border-l-4 border-l-fuchsia-500">
-                                                    <div className="text-2xl font-display text-white">{metric.v}</div>
-                                                    <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-slate-500">{metric.k}</div>
+                                                <Card key={i} className="p-5 border-l-4 border-l-fuchsia-500 shadow-md">
+                                                    <div className="text-2xl font-display text-slate-900">{metric.v}</div>
+                                                    <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-slate-400">{metric.k}</div>
                                                 </Card>
                                             ))}
                                         </div>
@@ -178,8 +178,8 @@ export default function ProjectDetail() {
                                 <div className="absolute bottom-0 left-0 -mb-20 -ml-20 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl home-glow" />
 
                                 <div className="relative z-10 max-w-2xl mx-auto">
-                                    <h2 className="font-display text-2xl sm:text-3xl text-white">Scale your operations with AI</h2>
-                                    <p className="mt-4 text-slate-300/80 leading-relaxed">
+                                    <h2 className="font-display text-2xl sm:text-3xl text-slate-900">Scale your operations with AI</h2>
+                                    <p className="mt-4 text-slate-600 leading-relaxed">
                                         Interested in a similar deployment for your facility or organization? Talk to our engineers about your constraints and requirements.
                                     </p>
                                     <div className="mt-8 flex flex-wrap justify-center gap-4">

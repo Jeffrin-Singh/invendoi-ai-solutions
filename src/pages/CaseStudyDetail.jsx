@@ -18,7 +18,7 @@ export default function CaseStudyDetail() {
             <section className="py-16 sm:py-20">
                 <Container>
                     <Card className="p-8">
-                        <div className="font-display text-2xl text-white">Case study not found</div>
+                        <div className="font-display text-2xl text-slate-900">Case study not found</div>
                         <p className="mt-2 text-sm text-slate-300/80">
                             Please go back to Portfolio and choose a valid case study.
                         </p>
@@ -45,10 +45,10 @@ export default function CaseStudyDetail() {
             <section className="py-16 sm:py-20">
                 <Container>
                     <Reveal>
-                        <div className="flex items-center gap-2 text-sm text-slate-300/70">
-                            <Link className="hover:text-white" to="/case-studies">Portfolio</Link>
+                        <div className="flex items-center gap-2 text-sm text-slate-500">
+                            <Link className="hover:text-slate-900" to="/case-studies">Portfolio</Link>
                             <span>/</span>
-                            <span className="text-slate-200/90">{cs.title}</span>
+                            <span className="text-slate-800 font-medium">{cs.title}</span>
                         </div>
 
                         <div className="mt-5 grid gap-10 lg:grid-cols-12">
@@ -60,31 +60,31 @@ export default function CaseStudyDetail() {
                                     ))}
                                 </div>
 
-                                <h1 className="mt-4 font-display text-3xl sm:text-4xl text-white">
+                                <h1 className="mt-4 font-display text-3xl sm:text-4xl text-slate-900">
                                     {cs.title}
                                 </h1>
-                                <p className="mt-4 text-base text-slate-300/85 leading-relaxed">
+                                <p className="mt-4 text-base text-slate-600 leading-relaxed">
                                     {cs.summary}
                                 </p>
 
                                 <div className="mt-8 grid gap-4">
                                     <Card className="p-6">
-                                        <div className="font-display text-xl text-white">Challenge</div>
-                                        <p className="mt-2 text-sm text-slate-300/80 leading-relaxed">
+                                        <div className="font-display text-xl text-slate-900">Challenge</div>
+                                        <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             {cs.challenge}
                                         </p>
                                     </Card>
 
                                     <Card className="p-6">
-                                        <div className="font-display text-xl text-white">Solution</div>
-                                        <p className="mt-2 text-sm text-slate-300/80 leading-relaxed">
+                                        <div className="font-display text-xl text-slate-900">Solution</div>
+                                        <p className="mt-2 text-sm text-slate-600 leading-relaxed">
                                             {cs.solution}
                                         </p>
                                     </Card>
 
                                     <Card className="p-6">
-                                        <div className="font-display text-xl text-white">Outcomes</div>
-                                        <ul className="mt-3 space-y-2 text-sm text-slate-300/80 leading-relaxed">
+                                        <div className="font-display text-xl text-slate-900">Outcomes</div>
+                                        <ul className="mt-3 space-y-2 text-sm text-slate-600 leading-relaxed">
                                             {cs.outcomes.map((o) => (
                                                 <li key={o}>• {o}</li>
                                             ))}
@@ -94,18 +94,18 @@ export default function CaseStudyDetail() {
                             </div>
 
                             <div className="lg:col-span-5">
-                                <Card className="overflow-hidden">
+                                <Card className="overflow-hidden border-white/40 shadow-xl">
                                     <div className="relative h-56 sm:h-72">
-                                        <img src={cs.heroImage} alt={cs.title} className="h-full w-full object-cover opacity-90" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
+                                        <img src={cs.heroImage} alt={cs.title} className="h-full w-full object-cover" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
                                     </div>
                                     <div className="p-6">
-                                        <div className="font-display text-lg text-white">Key metrics</div>
+                                        <div className="font-display text-lg text-slate-900">Key metrics</div>
                                         <div className="mt-4 space-y-3">
                                             {cs.metrics.map((m) => (
-                                                <div key={m.k} className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 px-4 py-3">
-                                                    <div className="text-sm text-slate-300/80">{m.k}</div>
-                                                    <div className="text-sm font-semibold text-white">{m.v}</div>
+                                                <div key={m.k} className="flex items-center justify-between rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
+                                                    <div className="text-sm text-slate-600">{m.k}</div>
+                                                    <div className="text-sm font-semibold text-slate-900">{m.v}</div>
                                                 </div>
                                             ))}
                                         </div>

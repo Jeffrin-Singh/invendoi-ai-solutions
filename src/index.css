@@ -7,32 +7,41 @@ html {
 }
 
 body {
-  @apply text-slate-100 font-sans antialiased;
-  /* Brighter dark base + soft gradients */
-  background-color: #0f172a;
-  /* softer than slate-950 */
+  @apply text-slate-900 font-sans antialiased;
+  background-color: #f8fafc;
+  /* slate-50 */
   background-image:
     radial-gradient(900px circle at 15% 10%, rgba(99, 102, 241, 0.18), transparent 55%),
-    radial-gradient(900px circle at 85% 15%, rgba(34, 211, 238, 0.14), transparent 55%),
-    radial-gradient(700px circle at 70% 85%, rgba(236, 72, 153, 0.10), transparent 55%),
+    radial-gradient(900px circle at 85% 15%, rgba(34, 211, 238, 0.16), transparent 55%),
+    radial-gradient(700px circle at 70% 85%, rgba(236, 72, 153, 0.12), transparent 55%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 35%);
 }
 
+p {
+  @apply text-slate-700;
+}
+
 ::selection {
-  background: rgba(99, 102, 241, 0.35);
+  background: rgba(99, 102, 241, 0.2);
 }
 
 .glass {
-  @apply bg-white/10 backdrop-blur-md border border-white/10 shadow-glow;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  /* slate-200/60 */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
 .glass-strong {
-  @apply bg-white/20 backdrop-blur-lg border border-white/20 shadow-glowStrong;
+  background-color: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
 }
 
 .grid-overlay {
-  /* Softer grid so it doesn't darken the canvas */
   background-image:
-    radial-gradient(circle at 1px 1px, rgba(148, 163, 184, .12) 1px, transparent 0);
+    radial-gradient(circle at 1px 1px, rgba(15, 23, 42, 0.08) 1px, transparent 0);
   background-size: 28px 28px;
 }

@@ -33,15 +33,15 @@ export default function Services() {
                             <Reveal key={s.slug} delay={idx * 0.03}>
                                 <Card className="overflow-hidden">
                                     <div className="relative h-44">
-                                        <img src={s.image} alt={s.title} className="h-full w-full object-cover opacity-90" loading="lazy" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/25 to-transparent" />
+                                        <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
                                         <div className="absolute bottom-3 left-4 right-4">
-                                            <div className="font-display text-lg text-white">{s.title}</div>
+                                            <div className="font-display text-lg text-slate-900">{s.title}</div>
                                         </div>
                                     </div>
 
                                     <div className="p-5">
-                                        <p className="text-sm text-slate-300/80 leading-relaxed">{s.short}</p>
+                                        <p className="text-sm text-slate-600 leading-relaxed">{s.short}</p>
                                         <div className="mt-5">
                                             <Button as={Link} to={`/services/${s.slug}`} variant="ghost">
                                                 View details <ArrowUpRight className="ml-1 h-4 w-4" />
@@ -55,8 +55,8 @@ export default function Services() {
 
                     <div className="mt-14">
                         <Card className="p-8">
-                            <div className="font-display text-2xl text-white">Need a deployment plan?</div>
-                            <p className="mt-2 text-sm text-slate-300/80 max-w-2xl">
+                            <div className="font-display text-2xl text-slate-900">Need a deployment plan?</div>
+                            <p className="mt-2 text-sm text-slate-600 max-w-2xl">
                                 Share your camera/UAV inventory, locations, bandwidth constraints, and SOP requirements.
                                 We’ll propose an architecture, pilot scope, and scaling roadmap.
                             </p>

@@ -28,9 +28,9 @@ export default function About() {
                     <div className="mt-10 grid gap-6 lg:grid-cols-3 items-stretch">
                         <Reveal className="h-full" boxClassName="h-full">
                             <Card className="p-8 h-full flex flex-col">
-                                <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Overview</div>
-                                <div className="mt-2 font-display text-2xl text-white">Company Overview</div>
-                                <p className="mt-4 text-sm text-slate-300/80 leading-relaxed flex-grow">
+                                <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Overview</div>
+                                <div className="mt-2 font-display text-2xl text-slate-900">Company Overview</div>
+                                <p className="mt-4 text-sm text-slate-600 leading-relaxed flex-grow">
                                     {company.overview}
                                 </p>
                             </Card>
@@ -38,9 +38,9 @@ export default function About() {
 
                         <Reveal delay={0.1} className="h-full" boxClassName="h-full">
                             <Card className="p-8 h-full flex flex-col">
-                                <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Mission</div>
-                                <div className="mt-2 font-display text-2xl text-white">Our Mission</div>
-                                <p className="mt-4 text-sm text-slate-300/90 leading-relaxed flex-grow">
+                                <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Mission</div>
+                                <div className="mt-2 font-display text-2xl text-slate-900">Our Mission</div>
+                                <p className="mt-4 text-sm text-slate-600 leading-relaxed flex-grow">
                                     {company.mission}
                                 </p>
                             </Card>
@@ -48,9 +48,9 @@ export default function About() {
 
                         <Reveal delay={0.2} className="h-full" boxClassName="h-full">
                             <Card className="p-8 h-full flex flex-col">
-                                <div className="text-xs font-bold tracking-wider text-indigo-400 uppercase">Vision</div>
-                                <div className="mt-2 font-display text-2xl text-white">Our Vision</div>
-                                <p className="mt-4 text-sm text-slate-300/90 leading-relaxed flex-grow">
+                                <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Vision</div>
+                                <div className="mt-2 font-display text-2xl text-slate-900">Our Vision</div>
+                                <p className="mt-4 text-sm text-slate-600 leading-relaxed flex-grow">
                                     {company.vision}
                                 </p>
                             </Card>
@@ -60,11 +60,11 @@ export default function About() {
                     <div className="mt-6">
                         <Reveal delay={0.3}>
                             <Card className="p-8">
-                                <div className="font-display text-2xl text-white">Recognition</div>
+                                <div className="font-display text-2xl text-slate-900">Recognition</div>
                                 <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
                                     {company.recognitions.map((r) => (
-                                        <li key={r} className="flex gap-3 text-sm text-slate-300/80 leading-relaxed p-4 rounded-xl border border-white/5 bg-white/5 h-full">
-                                            <span className="text-indigo-500 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                        <li key={r} className="flex gap-3 text-sm text-slate-600 leading-relaxed p-4 rounded-xl border border-slate-200/60 bg-white/40 h-full">
+                                            <span className="text-indigo-600 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-600 shrink-0" />
                                             {r}
                                         </li>
                                     ))}
@@ -76,8 +76,8 @@ export default function About() {
                     <div className="mt-6 grid gap-6 lg:grid-cols-2 items-stretch">
                         <Reveal className="lg:col-span-2 h-full" boxClassName="h-full">
                             <Card className="p-8 h-full">
-                                <div className="font-display text-2xl text-white">Core competencies</div>
-                                <ul className="mt-6 space-y-4 text-sm text-slate-300/80 leading-relaxed">
+                                <div className="font-display text-2xl text-slate-900">Core competencies</div>
+                                <ul className="mt-6 space-y-4 text-sm text-slate-600 leading-relaxed">
                                     <li className="flex gap-3">
                                         <span className="text-indigo-500 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
                                         <span>Real-time video analytics across CCTV, drones/UAVs, body-cams, and mobile streams.</span>
@@ -104,12 +104,12 @@ export default function About() {
 
                         <Reveal delay={0.06} className="h-full" boxClassName="h-full">
                             <Card className="p-8 h-full">
-                                <div className="font-display text-2xl text-white">How we engage</div>
-                                <ol className="mt-6 space-y-4 text-sm text-slate-300/80 leading-relaxed list-decimal pl-5">
-                                    <li className="pl-2"><b className="text-slate-100 italic">Discovery:</b> streams, zones, SOPs, data governance.</li>
-                                    <li className="pl-2"><b className="text-slate-100 italic">Pilot:</b> model tuning, alert rules, evidence workflow, operator feedback.</li>
-                                    <li className="pl-2"><b className="text-slate-100 italic">Scale:</b> multi-stream optimization, health analytics, role-based access, integrations.</li>
-                                    <li className="pl-2"><b className="text-slate-100 italic">Operate:</b> monitoring dashboards, audits, continuous improvements.</li>
+                                <div className="font-display text-2xl text-slate-900">How we engage</div>
+                                <ol className="mt-6 space-y-4 text-sm text-slate-600 leading-relaxed list-decimal pl-5">
+                                    <li className="pl-2"><b className="text-slate-900 italic">Discovery:</b> streams, zones, SOPs, data governance.</li>
+                                    <li className="pl-2"><b className="text-slate-900 italic">Pilot:</b> model tuning, alert rules, evidence workflow, operator feedback.</li>
+                                    <li className="pl-2"><b className="text-slate-900 italic">Scale:</b> multi-stream optimization, health analytics, role-based access, integrations.</li>
+                                    <li className="pl-2"><b className="text-slate-900 italic">Operate:</b> monitoring dashboards, audits, continuous improvements.</li>
                                 </ol>
                             </Card>
                         </Reveal>

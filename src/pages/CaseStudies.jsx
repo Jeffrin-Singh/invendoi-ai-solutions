@@ -34,19 +34,19 @@ export default function CaseStudies() {
                                 <Card className="overflow-hidden">
                                     <div className="grid md:grid-cols-5">
                                         <div className="relative md:col-span-2 h-48 md:h-full">
-                                            <img src={c.heroImage} alt={c.title} className="h-full w-full object-cover opacity-90" loading="lazy" />
-                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent" />
+                                            <img src={c.heroImage} alt={c.title} className="h-full w-full object-cover" loading="lazy" />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
                                         </div>
                                         <div className="md:col-span-3 p-6">
-                                            <div className="text-xs text-slate-300/70">{c.industry}</div>
-                                            <div className="mt-1 font-display text-xl text-white">{c.title}</div>
-                                            <p className="mt-3 text-sm text-slate-300/80 leading-relaxed">
+                                            <div className="text-xs text-slate-500">{c.industry}</div>
+                                            <div className="mt-1 font-display text-xl text-slate-900">{c.title}</div>
+                                            <p className="mt-3 text-sm text-slate-600 leading-relaxed">
                                                 {c.summary}
                                             </p>
 
                                             <div className="mt-4 flex flex-wrap gap-2">
                                                 {c.tech.slice(0, 3).map((t) => (
-                                                    <span key={t} className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-200/80">
+                                                    <span key={t} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-600 shadow-sm">
                                                         {t}
                                                     </span>
                                                 ))}

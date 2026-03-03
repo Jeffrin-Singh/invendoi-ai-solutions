@@ -9,17 +9,17 @@ export default function CTASection() {
         <section className="py-16 sm:py-20">
             <Container>
                 <Reveal>
-                    <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-white/5 via-white/4 to-white/5 p-10 shadow-glow">
-                        <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full blur-3xl opacity-25 bg-gradient-to-tr from-indigo-500 via-cyan-400 to-fuchsia-500" />
+                    <div className="relative overflow-hidden rounded-3xl glass p-10 shadow-xl border-white/40">
+                        <div className="absolute -top-24 -left-24 h-64 w-64 rounded-full blur-3xl opacity-15 bg-gradient-to-tr from-indigo-500 via-cyan-400 to-fuchsia-500" />
                         <div className="relative grid gap-8 lg:grid-cols-12 lg:items-center">
                             <div className="lg:col-span-8">
-                                <div className="text-xs font-semibold tracking-widest text-slate-300/70 uppercase">
+                                <div className="text-xs font-semibold tracking-widest text-indigo-600 uppercase">
                                     Ready to deploy
                                 </div>
-                                <div className="mt-2 font-display text-3xl text-white">
+                                <div className="mt-2 font-display text-3xl text-slate-900">
                                     Build an AI monitoring system that operators actually trust.
                                 </div>
-                                <p className="mt-3 text-sm sm:text-base text-slate-300/80 leading-relaxed max-w-2xl">
+                                <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
                                     Tell us your environment (cameras, drones, locations, workflows). We’ll propose a deployment plan
                                     that fits scale, bandwidth, and governance needs—edge to cloud.
                                 </p>
