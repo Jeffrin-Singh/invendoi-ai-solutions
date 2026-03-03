@@ -6,7 +6,7 @@ export const caseStudies = [
         slug: "lsgd-waste-enforcement-kerala",
         title: "AI-Based Waste Management & Surveillance (LSGD, Kerala)",
         industry: "Government / Municipal Enforcement",
-        heroImage: u("photo-1523966211575-eb4a01e7dd51"),
+        heroImage: u("photo-1604187351574-c75ca79f5807"),
         summary:
             "A scalable CCTV analytics deployment that detects waste dumping and cleanliness violations, generates evidence automatically, and routes geo-tagged alerts to enforcement teams—built for ward-level operations and auditing.",
         challenge:
