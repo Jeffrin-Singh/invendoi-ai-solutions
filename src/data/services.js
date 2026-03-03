@@ -165,7 +165,7 @@ export const services = [
         title: "Face Recognition & Secure Access (Privacy-safe)",
         short:
             "Watchlists, liveness checks, on-prem/on-edge inference, tamper-proof audit trails—aligned to lawful use.",
-        image: u("photo-1526378722445-4bda25a33f2f"),
+        image: u("photo-1556157382-97eda2d62296"),
         highlights: ["Watchlists", "Liveness checks", "On-prem / edge inference"],
         projectSlugs: ["privacy-safe-face-recognition"],
         details: {
