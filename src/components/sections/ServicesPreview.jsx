@@ -1,75 +1,67 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import Container from "../layout/Container.jsx";
 import SectionHeading from "../ui/SectionHeading.jsx";
 import Button from "../ui/Button.jsx";
-import Card from "../ui/Card.jsx";
-import Reveal from "../ui/Reveal.jsx";
 import { services } from "../../data/services.js";
 import { ArrowUpRight } from "lucide-react";
+import { theme } from "../../styles/theme";
 
 export default function ServicesPreview() {
-    const top = services.slice(0, 6);
+    const top = services.slice(0, 3);
 
     return (
-        <section className="py-16 sm:py-20">
+        <section className="relative py-20 overflow-hidden">
             <Container>
-                <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-                    <Reveal>
-                        <SectionHeading
-                            kicker="Services"
-                            title="From edge inference to control-room outcomes"
-                            description="We combine real-time analytics, secure portals, and integration-ready workflows for government and enterprise operations."
-                        />
-                    </Reveal>
-                    <Reveal>
-                        <Button as={Link} to="/services" variant="secondary">
-                            Explore all services <ArrowUpRight className="ml-1 h-4 w-4" />
-                        </Button>
-                    </Reveal>
+                <div className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
+                    <SectionHeading
+                        kicker="Intelligence"
+                        title="From edge inference to outcomes."
+                        description="Real-time analytics and secure workflows built for the tactical edge."
+                        align="left"
+                    />
+                    <Button as={Link} to="/services" variant="secondary" className="hidden md:flex">
+                        Explore All Services <ArrowUpRight className="ml-1 h-4 w-4" />
+                    </Button>
                 </div>
 
-                <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                    {top.map((s, idx) => (
-                        <Reveal key={s.slug} delay={idx * 0.04}>
-                            <motion.div whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
-                                <Card className="overflow-hidden">
-                                    <div className="relative h-44">
-                                        <img
-                                            src={s.image}
-                                            alt={s.title}
-                                            className="h-full w-full object-cover"
-                                            loading="lazy"
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/20 to-transparent" />
-                                        <div className="absolute bottom-3 left-4 right-4">
-                                            <div className="font-display text-lg text-slate-900">{s.title}</div>
-                                        </div>
-                                    </div>
+                <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {top.map((s) => (
+                        <div key={s.slug} className="group glass rounded-[32px] overflow-hidden border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all flex flex-col">
+                            <div className="relative h-52 overflow-hidden">
+                                <img
+                                    src={s.image}
+                                    alt={s.title}
+                                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    loading="lazy"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220] via-transparent to-transparent opacity-80" />
+                                <div className="absolute bottom-5 left-6 right-6">
+                                    <h3 className="font-display text-xl text-white group-hover:text-indigo-300 transition-colors">
+                                        {s.title}
+                                    </h3>
+                                </div>
+                            </div>
 
-                                    <div className="p-5">
-                                        <p className="text-sm text-slate-600 leading-relaxed">
-                                            {s.short}
-                                        </p>
+                            <div className="p-8 flex flex-col flex-grow">
+                                <p className={`text-sm ${theme.mutedText} leading-relaxed`}>
+                                    {s.short}
+                                </p>
 
-                                        <ul className="mt-4 space-y-2">
-                                            {s.highlights.map((h) => (
-                                                <li key={h} className="text-xs text-slate-500">
-                                                    • {h}
-                                                </li>
-                                            ))}
-                                        </ul>
-
-                                        <div className="mt-5">
-                                            <Button as={Link} to={`/services/${s.slug}`} variant="ghost">
-                                                View details <ArrowUpRight className="ml-1 h-4 w-4" />
-                                            </Button>
-                                        </div>
-                                    </div>
-                                </Card>
-                            </motion.div>
-                        </Reveal>
+                                <div className="mt-8 pt-6 border-t border-white/5 flex-grow flex items-end">
+                                    <Button as={Link} to={`/services/${s.slug}`} variant="ghost" className="w-full justify-between -ml-2 group/btn">
+                                        <span>View details</span>
+                                        <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
                     ))}
+                </div>
+
+                <div className="mt-12 md:hidden">
+                    <Button as={Link} to="/services" variant="secondary" className="w-full">
+                        Explore All Services <ArrowUpRight className="ml-1 h-4 w-4" />
+                    </Button>
                 </div>
             </Container>
         </section>

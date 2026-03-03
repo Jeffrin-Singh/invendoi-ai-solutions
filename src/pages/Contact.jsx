@@ -2,11 +2,10 @@ import { useState } from "react";
 import SEO from "../app/seo/SEO.jsx";
 import Container from "../components/layout/Container.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import Card from "../components/ui/Card.jsx";
-import Reveal from "../components/ui/Reveal.jsx";
 import Button from "../components/ui/Button.jsx";
 import { company } from "../data/company.js";
 import { cn } from "../lib/cn.js";
+import { theme } from "../styles/theme";
 
 export default function Contact() {
     const [form, setForm] = useState({ name: "", email: "", org: "", message: "" });
@@ -19,135 +18,125 @@ export default function Contact() {
                 title="Contact | Invendoi AI Solutions"
                 description="Request a demo or proposal for edge AI video analytics, geospatial evidence mapping, drone intelligence, and secure portal integrations."
                 path="/contact"
-                image="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80"
             />
 
-            <section className="py-16 sm:py-20">
+            <section className="relative py-20 overflow-hidden">
+                <div className="absolute inset-0 grid-overlay opacity-[0.05]" />
                 <Container>
-                    <Reveal>
-                        <SectionHeading
-                            kicker="Contact"
-                            title="Let’s scope your deployment"
-                            description="Share your camera/UAV setup, locations, bandwidth constraints, and SOP requirements. We’ll respond with a practical pilot + scale plan."
-                        />
-                    </Reveal>
+                    <SectionHeading
+                        kicker="Contact"
+                        title="Engineer the Future."
+                        description="Share your mission requirements. We'll respond with a technical architecture and deployment roadmap."
+                    />
 
-                    <div className="mt-10 grid gap-6 lg:grid-cols-12 items-stretch">
-                        <Reveal className="lg:col-span-7 h-full" boxClassName="h-full">
-                            <Card className="p-8 h-full flex flex-col">
-                                <div className="font-display text-2xl text-slate-900">Send a message</div>
-                                <p className="mt-3 text-sm text-slate-600 leading-relaxed">
-                                    Have a specific environment or scale in mind? Tell us about your cameras, drones, or locations, and we'll prepare a tailored deployment architecture.
-                                </p>
+                    <div className="mt-16 grid gap-10 lg:grid-cols-12 items-start">
+                        <div className="lg:col-span-7 glass-strong p-10 rounded-[40px] border-white/10 bg-white/[0.03]">
+                            <h3 className="font-display text-2xl text-white mb-2">Send an Inquiry</h3>
+                            <p className={`text-sm ${theme.mutedText} leading-relaxed mb-10`}>
+                                Tell us about your operational environment (cameras, UAVs, etc.) and your tactical goals.
+                            </p>
 
-                                <div className="mt-8 grid gap-5 sm:grid-cols-2 flex-grow">
-                                    <Field label="Your name">
-                                        <input
-                                            name="name"
-                                            value={form.name}
+                            <div className="grid gap-6 sm:grid-cols-2">
+                                <Field label="Full Name">
+                                    <input
+                                        name="name"
+                                        value={form.name}
+                                        onChange={onChange}
+                                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                                        placeholder="John Carter"
+                                    />
+                                </Field>
+                                <Field label="Work Email">
+                                    <input
+                                        name="email"
+                                        value={form.email}
+                                        onChange={onChange}
+                                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                                        placeholder="carter@agency.gov"
+                                    />
+                                </Field>
+                                <Field label="Organization" className="sm:col-span-2">
+                                    <input
+                                        name="org"
+                                        value={form.org}
+                                        onChange={onChange}
+                                        className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all font-sans"
+                                        placeholder="Department or Firm"
+                                    />
+                                </Field>
+                                <div className="sm:col-span-2">
+                                    <Field label="Brief Scope">
+                                        <textarea
+                                            name="message"
+                                            value={form.message}
                                             onChange={onChange}
-                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
-                                            placeholder="Full name"
+                                            rows={5}
+                                            className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 text-sm text-white placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none font-sans"
+                                            placeholder="Example: Need real-time analytics for 500 fixed cameras across municipal zones..."
                                         />
                                     </Field>
-                                    <Field label="Work email">
-                                        <input
-                                            name="email"
-                                            value={form.email}
-                                            onChange={onChange}
-                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
-                                            placeholder="name@company.com"
-                                        />
-                                    </Field>
-                                    <Field label="Organization" className="sm:col-span-2">
-                                        <input
-                                            name="org"
-                                            value={form.org}
-                                            onChange={onChange}
-                                            className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all"
-                                            placeholder="Department / Company"
-                                        />
-                                    </Field>
-                                    <div className="sm:col-span-2">
-                                        <Field label="What do you want to build?">
-                                            <textarea
-                                                name="message"
-                                                value={form.message}
-                                                onChange={onChange}
-                                                rows={5}
-                                                className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-500 outline-none focus:ring-2 focus:ring-indigo-500/50 transition-all resize-none"
-                                                placeholder="Example: 200+ cameras across 10 zones, need geo-tagged violations + evidence workflow..."
-                                            />
-                                        </Field>
-                                    </div>
                                 </div>
+                            </div>
 
-                                <div className="mt-8 flex flex-col sm:flex-row gap-3">
-                                    <Button className="flex-grow sm:flex-grow-0 min-w-[160px]"
-                                        onClick={() => alert("Form submitted successfully! (Demo mode)")}
-                                    >
-                                        Send inquiry
-                                    </Button>
-                                    <Button variant="secondary" className="flex-grow sm:flex-grow-0" onClick={() => setForm({ name: "", email: "", org: "", message: "" })}>
-                                        Reset
-                                    </Button>
-                                </div>
-                            </Card>
-                        </Reveal>
+                            <div className="mt-10 flex flex-wrap gap-4">
+                                <Button className="px-10" onClick={() => alert("Form submitted successfully! (Demo mode)")}>
+                                    Submit Request
+                                </Button>
+                                <Button
+                                    variant="secondary"
+                                    onClick={() => setForm({ name: "", email: "", org: "", message: "" })}
+                                >
+                                    Clear Form
+                                </Button>
+                            </div>
+                        </div>
 
-                        <Reveal delay={0.1} className="lg:col-span-5 h-full" boxClassName="h-full">
-                            <Card className="p-8 h-full flex flex-col">
-                                <div className="font-display text-2xl text-slate-900">Direct contact</div>
+                        <div className="lg:col-span-5 space-y-8">
+                            <div className="glass p-10 rounded-[40px]">
+                                <h3 className="font-display text-xl text-white mb-8">Operational Support</h3>
 
-                                <div className="mt-6 space-y-6 flex-grow">
-                                    <div className="group">
-                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Email</div>
-                                        <div className="mt-2 text-sm">
-                                            <a className="text-slate-600 hover:text-slate-900 transition-colors block" href={`mailto:${company.emailPrimary}`}>
-                                                {company.emailPrimary}
-                                            </a>
-                                            <div className="mt-1 text-xs text-slate-500">
-                                                Proposals: {company.emailAlt}
-                                            </div>
-                                        </div>
+                                <div className="space-y-8">
+                                    <div>
+                                        <div className="text-[10px] font-bold tracking-[0.2em] text-indigo-400 uppercase mb-3">Electronic Mail</div>
+                                        <a href={`mailto:${company.emailPrimary}`} className="text-white hover:text-indigo-300 transition-colors block text-lg font-sans">
+                                            {company.emailPrimary}
+                                        </a>
+                                        <span className="text-xs text-slate-500 mt-1 block tracking-wide">Inquiries: {company.emailAlt}</span>
                                     </div>
 
                                     <div>
-                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Phone</div>
-                                        <div className="mt-2 text-sm">
-                                            <a className="text-slate-600 hover:text-slate-900 transition-colors" href={`tel:${company.phone.replace(/\s/g, "")}`}>
-                                                {company.phone}
-                                            </a>
-                                        </div>
+                                        <div className="text-[10px] font-bold tracking-[0.2em] text-indigo-400 uppercase mb-3">Tactical Comms</div>
+                                        <a href={`tel:${company.phone.replace(/\s/g, "")}`} className="text-white hover:text-indigo-300 transition-colors block text-lg font-sans">
+                                            {company.phone}
+                                        </a>
                                     </div>
 
                                     <div>
-                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">Location</div>
-                                        <div className="mt-2 text-sm text-slate-600 leading-relaxed">
-                                            <div>{company.addressLines[0]}</div>
-                                            <div>{company.addressLines[1]}</div>
+                                        <div className="text-[10px] font-bold tracking-[0.2em] text-indigo-400 uppercase mb-3">Headquarters</div>
+                                        <div className="text-white text-lg leading-relaxed font-sans uppercase tracking-tight">
+                                            {company.addressLines.map(l => <div key={l}>{l}</div>)}
                                         </div>
                                     </div>
-
-                                    <div className="pt-6 border-t border-slate-200">
-                                        <div className="text-xs font-bold tracking-wider text-indigo-600 uppercase">What to include</div>
-                                        <ul className="mt-4 space-y-3">
-                                            {[
-                                                "Number of cameras/UAVs and locations",
-                                                "Alert types (violations, safety, wildlife, etc.)",
-                                                "Bandwidth and power availability",
-                                                "Workflow needs (evidence, audit, integrations)"
-                                            ].map((item) => (
-                                                <li key={item} className="flex gap-3 text-sm text-slate-600">
-                                                    <span className="text-indigo-600 mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-600 shrink-0" />
-                                                    {item}
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
                                 </div>
-                            </Card>
-                        </Reveal>
+                            </div>
+
+                            <div className="glass-strong p-8 rounded-[40px] bg-indigo-500/5 border-white/10">
+                                <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-6">Engagement Focus</h4>
+                                <ul className="space-y-4">
+                                    {[
+                                        "Municipal & Defense Video Analytics",
+                                        "Edge AI Deployment (Jetson/GPU)",
+                                        "UAV/Drone Sensor Fusion",
+                                        "Sovereign Intelligence Networks"
+                                    ].map(item => (
+                                        <li key={item} className="flex gap-4 items-start text-sm text-slate-400">
+                                            <div className="mt-1.5 h-1.5 w-1.5 rounded-full bg-indigo-500 shrink-0" />
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </Container>
             </section>
@@ -158,7 +147,7 @@ export default function Contact() {
 function Field({ label, children, className = "" }) {
     return (
         <label className={cn("block", className)}>
-            <div className="mb-2 text-xs font-semibold text-slate-700">{label}</div>
+            <div className="mb-3 text-[10px] font-bold text-slate-500 uppercase tracking-widest">{label}</div>
             {children}
         </label>
     );

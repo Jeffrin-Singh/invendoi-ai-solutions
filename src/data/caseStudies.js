@@ -8,93 +8,205 @@ export const caseStudies = [
         industry: "Government / Municipal Enforcement",
         heroImage: u("photo-1523966211575-eb4a01e7dd51"),
         summary:
-            "Large-scale deployment for real-time violation detection, geo-tagged alerts, and evidence management.",
+            "A scalable CCTV analytics deployment that detects waste dumping and cleanliness violations, generates evidence automatically, and routes geo-tagged alerts to enforcement teams—built for ward-level operations and auditing.",
         challenge:
-            "Municipal enforcement teams needed scalable monitoring and evidentiary workflows across many locations and cameras.",
+            "As camera coverage expands across wards, manual monitoring can’t keep up. Violations get missed, evidence is inconsistent, and enforcement becomes slower and harder to audit.",
         solution:
-            "Real-time video analytics with geo-tagged alerts and structured evidence management designed for enforcement operations.",
+            "Invendoi implemented real-time video analytics on existing CCTV feeds with zone rules, auto evidence snapshots/clips, geo-tagged incident records, and dashboards that support enforcement workflows and reporting.",
         outcomes: [
             "Large-scale rollout referenced at 2,000+ cameras",
-            "Faster incident identification and evidence retrieval",
-            "Operational dashboards for monitoring and audit",
+            "Faster violation detection and evidence retrieval for field teams",
+            "Operator/admin dashboards aligned to monitoring and audit needs",
         ],
         metrics: [{ k: "Deployment Scale", v: "2,000+ cameras" }],
-        tech: ["Real-time Video Analytics", "Geo-tagging", "Evidence Workflows"],
+        tech: ["Real-time Video Analytics", "Geo-tagging", "Evidence Workflows", "RBAC Dashboards"],
     },
+
     {
         slug: "elephant-detection-forest-corridors",
-        title: "Forest/Wildlife Monitoring: Elephant Detection & Instant Alerts",
-        industry: "Forest / Wildlife Protection",
+        title: "Forest Corridor Early Warning: Elephant Detection & Instant Alerts",
+        industry: "Government / Forest & Wildlife Monitoring",
         heroImage: u("photo-1501785888041-af3ef285b470"),
         summary:
-            "Edge AI detection and alerting designed for low-bandwidth forest corridors with automated deterrent triggers.",
+            "An edge AI early-warning system for elephant movement detection in low-connectivity forest corridors, delivering rapid alerts and field-ready evidence capture.",
         challenge:
-            "Forest corridors need reliable early warning systems under low bandwidth and rugged conditions.",
+            "Wildlife corridors require dependable early warning under low bandwidth, rugged conditions, and inconsistent power—where cloud-first pipelines often fail.",
         solution:
-            "On-device inference with low-bandwidth operation and automated alerting/deterrent triggers for rapid response.",
+            "Invendoi built an edge-first detection workflow optimized for field constraints, with lightweight alert routing, event logging, and optional integrations for deterrent/response actions.",
         outcomes: [
             "200+ elephant detections referenced in pilot operations",
-            "Low-latency alerts to reduce conflict risk",
-            "Validated effectiveness via reports and field operations",
+            "Low-latency alerts to reduce conflict risk and improve response time",
+            "Field validation through reports and operational trials",
         ],
-        metrics: [{ k: "Pilot Detections", v: "200+ elephants detected" }],
-        tech: ["Edge AI", "Real-time Alerts", "Low-bandwidth Pipelines"],
+        metrics: [{ k: "Pilot Detections", v: "200+ detections" }],
+        tech: ["Edge AI (Jetson-class)", "Real-time Alerts", "Low-bandwidth Pipelines", "Evidence Capture"],
     },
+
     {
         slug: "retail-infrastructure-safety",
         title: "Retail & Infrastructure Safety Monitoring",
         industry: "Enterprise Safety",
         heroImage: u("photo-1558008258-3256797b43f3"),
         summary:
-            "Abnormal activity detection, zone breaches, fall detection, and early fire/smoke warnings integrated with control rooms.",
+            "Multi-camera safety analytics for restricted-zone enforcement, anomaly/fall-type events (where applicable), and early risk detection—integrated with operational dashboards for incident review and escalation.",
         challenge:
-            "Enterprises require consistent detection of safety risks and abnormal activity without constant manual monitoring.",
+            "Enterprises need consistent detection of safety risks and abnormal activity across multiple sites. Manual monitoring is inconsistent, costly, and doesn’t scale across shifts.",
         solution:
-            "Behavioral analytics + safety detection with clear alert escalation and control-room integrations.",
+            "Invendoi delivered real-time detection workflows with zone policies, alert routing, and evidence generation (snapshots/clips) so safety teams can respond quickly and maintain audit-ready incident records.",
         outcomes: [
-            "Improved visibility into high-risk events",
-            "Reduced dependence on constant human monitoring",
-            "Better incident response readiness",
+            "Improved visibility into high-risk events across camera networks",
+            "Reduced dependence on constant human monitoring for incident discovery",
+            "Operational readiness through incident timelines and evidence exports",
         ],
-        metrics: [{ k: "Monitoring Efficiency", v: "Designed for control room operations" }],
-        tech: ["Behavioral Detection", "Safety Analytics", "Alert Workflows"],
+        metrics: [{ k: "Ops Fit", v: "Designed for control-room workflows" }],
+        tech: ["Zone Policies", "Safety Analytics", "Alert Workflows", "Evidence Export"],
     },
+
     {
         slug: "privacy-safe-face-recognition",
-        title: "Privacy-safe Face Recognition (Mediatronix MoU)",
-        industry: "Secure Facilities / Law Enforcement",
+        title: "Privacy-Safe Face Recognition (Mediatronix MoU)",
+        industry: "Government / Secure Facilities (Governed Use)",
         heroImage: u("photo-1526374965328-7f61d4dc18c5"),
         summary:
-            "Co-developed privacy-safe face recognition with watchlists, liveness checks, on-prem/on-edge inference and audit trails.",
+            "A governed face-recognition workflow designed around controlled watchlists, liveness checks, audit trails, and on-prem/on-edge deployment options—built for accountable operations.",
         challenge:
-            "Secure identification requires governance: controlled watchlists, auditability, and lawful-use alignment.",
+            "Identification systems require governance: controlled watchlists, access policies, auditability, and deployment flexibility—while keeping operations secure and reviewable.",
         solution:
-            "Access-controlled watchlists, liveness checks, zone triggers, and tamper-proof audit trails with on-prem/on-edge options.",
+            "Invendoi co-designed an access-controlled workflow with RBAC watchlist management, liveness checks, traceable event logs, and deployment options aligned to policy-driven use.",
         outcomes: [
             "PoCs and limited-scope deployments delivered",
-            "Audit-first workflows for governance and traceability",
-            "Designed for high-throughput multi-stream handling",
+            "Audit-first workflows for traceability and governance",
+            "Architecture designed to support multi-stream operations",
         ],
-        metrics: [{ k: "Deployment Mode", v: "On-prem / On-edge inference" }],
-        tech: ["Watchlists", "Liveness", "Audit Trails", "Edge Inference"],
+        metrics: [{ k: "Deployment Mode", v: "On-prem / On-edge options" }],
+        tech: ["Watchlists (RBAC)", "Liveness", "Audit Trails", "Edge/On-Prem Inference"],
     },
+
     {
         slug: "drone-object-tracking-saudi-cet",
         title: "Drone-based Object Tracking (Saudi Arabia + CET)",
         industry: "UAV / Field Intelligence",
-        heroImage: u("photo-1473929734674-80d1ea1d9f4e"),
+        heroImage: u("photo-1473968512647-3e447244af8f"),
         summary:
-            "Multi-UAV object detection & tracking with fused telemetry, long-range RF links, and low-bandwidth streaming.",
+            "Multi-UAV object detection and tracking with fused telemetry (GPS/altitude), designed for bandwidth constraints and operator workflows—supporting both real-time missions and after-action analysis.",
         challenge:
-            "Aerial tracking must remain reliable across desert/coastal conditions, including night/thermal scenarios.",
+            "Aerial tracking must remain reliable despite unstable links, wide-area movement, and changing conditions. Operators need continuity and location context, not just bounding boxes.",
         solution:
-            "YOLO-based tracking with GPS/altitude telemetry fusion and adaptive low-bandwidth streaming for operator workflows.",
+            "Invendoi implemented detection + tracking with telemetry fusion and low-bandwidth streaming patterns, producing mission logs and outputs suitable for real-time decision-making and post-mission review.",
         outcomes: [
-            "Field-tested across varied conditions",
-            "Telemetry-fused tracking for better target continuity",
-            "Operator training and after-action analytics delivered",
+            "Field-tested across varied operating conditions",
+            "Telemetry-fused tracking improves target continuity and context",
+            "Operator-friendly outputs for mission and after-action workflows",
         ],
         metrics: [{ k: "Targets", v: "Humans / vehicles / vessels" }],
-        tech: ["YOLO-based Detection", "Telemetry Fusion", "Low-bandwidth Streaming"],
+        tech: ["YOLO-based Detection", "Tracking", "Telemetry Fusion", "Low-bandwidth Streaming"],
+    },
+
+    // ✅ NEW: Saudi/GCC retail abnormal behavior monitoring
+    {
+        slug: "saudi-retail-abnormal-behavior-monitoring",
+        title: "Abnormal Behavior & Loss-Risk Monitoring (Retail, Saudi Arabia)",
+        industry: "Retail / Loss Prevention (GCC)",
+        heroImage: u("photo-1556740738-b6a63e27c4df"),
+        summary:
+            "A retail-focused video intelligence layer that flags abnormal behavior patterns, restricted-area events, and operational anomalies—creating evidence snippets and streamlined review workflows for loss-prevention teams.",
+        challenge:
+            "Loss-prevention teams face high camera volume and inconsistent manual review. Risk events are often noticed late, and evidence compilation is time-consuming.",
+        solution:
+            "Invendoi delivered event-driven detection workflows with configurable zones/rules, evidence snapshots/clips, and a review-friendly incident feed so teams can act faster with consistent documentation.",
+        outcomes: [
+            "Faster identification of high-risk events through event-driven review",
+            "Consistent evidence capture for internal audits and investigations",
+            "Configurable zones/rules aligned to store operations",
+        ],
+        metrics: [{ k: "Operational Flow", v: "Event feed + evidence snippets" }],
+        tech: ["Multi-camera Analytics", "Zone Rules", "Incident Review UX", "Evidence Clips"],
+    },
+
+    // ✅ NEW: Multi-site command center + alerts
+    {
+        slug: "multi-site-command-center-alerting",
+        title: "Multi-Site AI Command Center (Dashboards + Real-time Alerts)",
+        industry: "Enterprise Command Center",
+        heroImage: u("photo-1551288049-bebda4e38f71"),
+        summary:
+            "A central command-center layer that unifies multi-camera monitoring across sites with event timelines, alert routing, camera health visibility, and role-based access—built for security and operations teams.",
+        challenge:
+            "Organizations struggle to operate multi-site camera networks efficiently—events are missed, health issues go unnoticed, and incident handling lacks a consistent workflow.",
+        solution:
+            "Invendoi built an operations-first dashboard with event timelines, evidence views, camera health signals, and RBAC—designed to support daily monitoring and incident response at scale.",
+        outcomes: [
+            "Improved operational visibility across sites and camera groups",
+            "Standardized incident workflow from detection to evidence export",
+            "Health monitoring reduces downtime and blind spots",
+        ],
+        metrics: [{ k: "Ops Capability", v: "Incident timeline + camera health" }],
+        tech: ["RBAC", "Observability Signals", "Event Timelines", "Evidence Workflow"],
+    },
+
+    // ✅ NEW: Industrial perimeter intrusion / restricted zones
+    {
+        slug: "industrial-perimeter-intrusion-zones",
+        title: "Industrial Perimeter Intrusion & Restricted-Zone Enforcement",
+        industry: "Industrial Safety & Security",
+        heroImage: u("photo-1507668077129-56e32842fceb"),
+        summary:
+            "A rule-driven perimeter security analytics layer that detects intrusions, loitering, and restricted-zone breaches—delivering actionable alerts with evidence for site security teams.",
+        challenge:
+            "Industrial sites need reliable monitoring across wide perimeters and multiple entry points. False alarms and fragmented review workflows reduce response effectiveness.",
+        solution:
+            "Invendoi configured zone-based detection rules with alert routing and evidence capture, enabling faster verification and response using a consistent incident review experience.",
+        outcomes: [
+            "Faster verification using evidence snapshots/clips",
+            "Zone-based rules align detections to real site boundaries",
+            "Incident workflow designed for security operations",
+        ],
+        metrics: [{ k: "Response Design", v: "Alerts + evidence for quick verification" }],
+        tech: ["Zone Breach Detection", "Loitering/Intrusion Rules", "Evidence Capture", "Dashboards"],
+    },
+
+    // ✅ NEW: Law enforcement blueprint/prototype (done work without over-claiming deployment)
+    {
+        slug: "law-enforcement-ai-surveillance-blueprint",
+        title: "AI Surveillance Blueprint for Law Enforcement (Governed Workflows)",
+        industry: "Government / Public Safety",
+        heroImage: u("photo-1585079542156-2755d9c8a094"),
+        summary:
+            "A solution blueprint and prototype modules for law-enforcement-grade video intelligence—focused on governed workflows, evidence handling, and operational dashboards.",
+        challenge:
+            "Public safety deployments require more than detection: governance, audit trails, role-based access, and standardized evidence workflows are essential for responsible operations.",
+        solution:
+            "Invendoi designed an audit-first architecture and prototype workflows covering event capture, evidence packaging, role-based access, and operational dashboards—aligned to accountable use.",
+        outcomes: [
+            "Operational workflow design aligned to governance and audit requirements",
+            "Prototype modules for evidence capture and review pipelines",
+            "Architecture ready for phased pilot → scale approach",
+        ],
+        metrics: [{ k: "Delivery Type", v: "Blueprint + prototype modules" }],
+        tech: ["RBAC", "Audit Trails", "Evidence Packaging", "Operational Dashboards"],
+    },
+
+    // ✅ NEW: Drone incident mapping / geo-analytics ops suite
+    {
+        slug: "drone-incident-mapping-geo-analytics",
+        title: "Drone Incident Mapping & Geo-Analytics (Operations Suite)",
+        industry: "UAV Intelligence / Geo-Analytics",
+        heroImage: u("photo-1523961131990-5ea7c61b2107"),
+        summary:
+            "An operations-ready drone analytics suite combining detection events with location context, timelines, and reporting outputs—built for field missions and command-center review.",
+        challenge:
+            "Drone missions generate large volumes of video and telemetry. Without structure, teams struggle to convert raw footage into actionable, reportable incident intelligence.",
+        solution:
+            "Invendoi structured mission outputs into time-ordered events with location context, evidence frames/clips, and reporting-ready exports—supporting both live ops and after-action review.",
+        outcomes: [
+            "Structured mission outputs improve operational review speed",
+            "Geo-context enables clearer incident understanding and reporting",
+            "Designed for field missions and command-center workflows",
+        ],
+        metrics: [{ k: "Output", v: "Timeline + geo-context + exports" }],
+        tech: ["Telemetry + Video Fusion", "Event Timelines", "Geo-Context", "Reporting Exports"],
     },
 ];
+
+export const getCaseStudyBySlug = (slug) =>
+    caseStudies.find((c) => c.slug === slug);

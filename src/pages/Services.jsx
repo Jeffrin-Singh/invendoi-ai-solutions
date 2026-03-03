@@ -1,12 +1,11 @@
 import SEO from "../app/seo/SEO.jsx";
 import Container from "../components/layout/Container.jsx";
 import SectionHeading from "../components/ui/SectionHeading.jsx";
-import Reveal from "../components/ui/Reveal.jsx";
-import Card from "../components/ui/Card.jsx";
 import Button from "../components/ui/Button.jsx";
 import { Link } from "react-router-dom";
 import { services } from "../data/services.js";
 import { ArrowUpRight } from "lucide-react";
+import { theme } from "../styles/theme";
 
 export default function Services() {
     return (
@@ -15,55 +14,66 @@ export default function Services() {
                 title="Services | Invendoi AI Solutions"
                 description="Real-time video analytics, edge AI deployment (Jetson/GPU), drone intelligence, geospatial evidence mapping, secure portals and integrations."
                 path="/services"
-                image="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=1600&q=80"
             />
 
-            <section className="py-16 sm:py-20">
+            <section className="relative py-20 overflow-hidden">
+                <div className="absolute inset-0 grid-overlay opacity-[0.05]" />
                 <Container>
-                    <Reveal>
-                        <SectionHeading
-                            kicker="Services"
-                            title="Capabilities that ship to production"
-                            description="We design, deploy, and integrate AI analytics systems that fit control-room workflows and field constraints."
-                        />
-                    </Reveal>
+                    <SectionHeading
+                        kicker="Capabilities"
+                        title="Specialized AI Solutions"
+                        description="We design and deploy intelligence systems built for the constraints of the real world."
+                    />
 
-                    <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-                        {services.map((s, idx) => (
-                            <Reveal key={s.slug} delay={idx * 0.03}>
-                                <Card className="overflow-hidden">
-                                    <div className="relative h-44">
-                                        <img src={s.image} alt={s.title} className="h-full w-full object-cover" loading="lazy" />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/10 to-transparent" />
-                                        <div className="absolute bottom-3 left-4 right-4">
-                                            <div className="font-display text-lg text-slate-900">{s.title}</div>
-                                        </div>
+                    <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                        {services.map((s) => (
+                            <div key={s.slug} className="group glass rounded-[32px] overflow-hidden border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all flex flex-col">
+                                <div className="relative h-56 overflow-hidden">
+                                    <img
+                                        src={s.image}
+                                        alt={s.title}
+                                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        loading="lazy"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b1220] via-[#0b1220]/20 to-transparent" />
+                                    <div className="absolute bottom-5 left-6 right-6">
+                                        <h3 className="font-display text-xl text-white group-hover:text-indigo-300 transition-colors">
+                                            {s.title}
+                                        </h3>
                                     </div>
+                                </div>
 
-                                    <div className="p-5">
-                                        <p className="text-sm text-slate-600 leading-relaxed">{s.short}</p>
-                                        <div className="mt-5">
-                                            <Button as={Link} to={`/services/${s.slug}`} variant="ghost">
-                                                View details <ArrowUpRight className="ml-1 h-4 w-4" />
-                                            </Button>
-                                        </div>
+                                <div className="p-8 flex flex-col flex-grow">
+                                    <p className={`text-sm ${theme.mutedText} leading-relaxed flex-grow`}>
+                                        {s.short}
+                                    </p>
+                                    <div className="mt-8 pt-6 border-t border-white/5">
+                                        <Button as={Link} to={`/services/${s.slug}`} variant="ghost" className="w-full justify-between -ml-2 group/btn">
+                                            <span>Learn more</span>
+                                            <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                                        </Button>
                                     </div>
-                                </Card>
-                            </Reveal>
+                                </div>
+                            </div>
                         ))}
                     </div>
 
-                    <div className="mt-14">
-                        <Card className="p-8">
-                            <div className="font-display text-2xl text-slate-900">Need a deployment plan?</div>
-                            <p className="mt-2 text-sm text-slate-600 max-w-2xl">
-                                Share your camera/UAV inventory, locations, bandwidth constraints, and SOP requirements.
-                                We’ll propose an architecture, pilot scope, and scaling roadmap.
-                            </p>
-                            <div className="mt-5">
-                                <Button as={Link} to="/contact">Request a proposal</Button>
+                    <div className="mt-20">
+                        <div className="glass-strong p-10 md:p-14 rounded-[40px] border-white/10 overflow-hidden relative">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 blur-[80px] -mr-32 -mt-32" />
+                            <div className="relative z-10 max-w-2xl">
+                                <h2 className="font-display text-3xl text-white">Need a custom deployment plan?</h2>
+                                <p className={`mt-4 ${theme.mutedText} text-base leading-relaxed`}>
+                                    Share your operational requirements, bandwidth constraints, and mission goals.
+                                    We’ll propose a custom architecture, hardware spec, and scaling roadmap.
+                                </p>
+                                <div className="mt-10">
+                                    <Button as={Link} to="/contact" className="px-8">
+                                        Request a Consultation
+                                    </Button>
+                                </div>
                             </div>
-                        </Card>
+                        </div>
                     </div>
                 </Container>
             </section>

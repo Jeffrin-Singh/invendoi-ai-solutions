@@ -1,76 +1,84 @@
 import { Link } from "react-router-dom";
-import Container from "./Container.jsx";
-import { company } from "../../data/company.js";
+import Container from "./Container";
+import { company } from "../../data/company";
+import { theme } from "../../styles/theme";
 
 export default function Footer() {
     return (
-        <footer className="border-t border-slate-200/70 bg-white/70">
-            <Container className="py-12">
-                <div className="grid gap-10 md:grid-cols-12">
-                    <div className="md:col-span-5">
-                        <div className="flex items-center gap-2">
-                            <img src="/logo.png" alt="Invendoi Logo" className="h-9 w-9 object-contain" />
-                            <div>
-                                <div className="font-display text-slate-900">{company.name}</div>
-                                <div className="text-xs text-slate-600">{company.tagline}</div>
+        <footer className={theme.footerBg}>
+            <Container className="py-12 md:py-16">
+                <div className="grid gap-10 lg:grid-cols-12 items-start">
+                    <div className="lg:col-span-4">
+                        <Link to="/" className="flex items-center gap-3 group">
+                            <div className="h-9 w-9 overflow-hidden rounded-xl bg-white/10 border border-white/20 flex items-center justify-center group-hover:bg-indigo-500/20 transition-all">
+                                <img src="/logo.png" alt="Logo" className="h-6 w-6 object-contain" />
                             </div>
-                        </div>
-
-                        <p className="mt-4 text-sm text-slate-600 leading-relaxed">
-                            Edge AI, real-time video analytics, and geospatial intelligence for government and enterprise
-                            operations—built for scale and field constraints.
+                            <span className="font-display text-lg tracking-wide text-white">Invendoi</span>
+                        </Link>
+                        <p className={`mt-4 ${theme.mutedText} max-w-xs leading-relaxed`}>
+                            Building edge AI and computer vision systems for high-stakes operational environments.
                         </p>
-
-                        <div className="mt-5 text-sm text-slate-600 space-y-1">
-                            <div>{company.location}</div>
-                            <div>
-                                <a className="hover:text-slate-900" href={`mailto:${company.emailPrimary}`}>
-                                    {company.emailPrimary}
-                                </a>{" "}
-                                •{" "}
-                                <a className="hover:text-slate-900" href={`tel:${company.phone.replace(/\s/g, "")}`}>
-                                    {company.phone}
-                                </a>
-                            </div>
-                        </div>
                     </div>
 
-                    <div className="md:col-span-7 grid gap-8 sm:grid-cols-3">
+                    <div className="lg:col-span-8 grid gap-8 grid-cols-2 sm:grid-cols-3">
                         <div>
-                            <div className="text-sm font-semibold text-slate-900">Company</div>
-                            <div className="mt-3 flex flex-col gap-2 text-sm text-slate-600">
-                                <Link className="hover:text-slate-900" to="/about">About</Link>
-                                <Link className="hover:text-slate-900" to="/services">Services</Link>
-                                <Link className="hover:text-slate-900" to="/case-studies">Portfolio</Link>
-                            </div>
+                            <div className="text-xs font-bold uppercase tracking-widest text-white/40">Quick Links</div>
+                            <ul className="mt-4 space-y-2">
+                                {["Home", "About", "Services", "Portfolio", "Contact"].map((l) => {
+                                    let to = "/";
+                                    if (l === "Portfolio") to = "/case-studies";
+                                    else if (l !== "Home") to = `/${l.toLowerCase().replace(" ", "-")}`;
+
+                                    return (
+                                        <li key={l}>
+                                            <Link
+                                                to={to}
+                                                className="text-sm text-slate-400 hover:text-white transition-colors"
+                                            >
+                                                {l}
+                                            </Link>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
                         </div>
 
                         <div>
-                            <div className="text-sm font-semibold text-slate-900">Get in touch</div>
-                            <div className="mt-3 flex flex-col gap-2 text-sm text-slate-600">
-                                <Link className="hover:text-slate-900" to="/contact">Contact</Link>
-                                <a className="hover:text-slate-900" href={`mailto:${company.emailAlt}`}>
-                                    Proposals: {company.emailAlt}
-                                </a>
-                            </div>
+                            <div className="text-xs font-bold uppercase tracking-widest text-white/40">Core Services</div>
+                            <ul className="mt-4 space-y-2">
+                                {["Video Analytics", "Edge AI", "Drone Intel", "Portals"].map((s) => (
+                                    <li key={s}>
+                                        <span className="text-sm text-slate-400 hover:text-white cursor-pointer transition-colors">
+                                            {s}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
                         </div>
 
-                        <div>
-                            <div className="text-sm font-semibold text-slate-900">Legal</div>
-                            <div className="mt-3 flex flex-col gap-2 text-sm text-slate-600">
-                                <span className="text-slate-400">Privacy (add later)</span>
-                                <span className="text-slate-400">Terms (add later)</span>
+                        <div className="col-span-2 sm:col-span-1">
+                            <div className="text-xs font-bold uppercase tracking-widest text-white/40">Headquarters</div>
+                            <div className="mt-4 text-sm text-slate-400 leading-relaxed uppercase tracking-wide">
+                                {company.addressLines.map((line) => (
+                                    <div key={line}>{line}</div>
+                                ))}
+                                <div className="mt-4">
+                                    <a href={`mailto:${company.emailPrimary}`} className="hover:text-white transition-colors block lowercase tracking-normal font-sans">
+                                        {company.emailPrimary}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between border-t border-slate-200/70 pt-6">
-                    <div className="text-xs text-slate-500">
-                        © {new Date().getFullYear()} {company.name}. All rights reserved.
+                <div className="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
+                    <div className="text-xs text-slate-500 font-medium tracking-wide">
+                        © {new Date().getFullYear()} Invendoi AI Solutions Pvt. Ltd. All rights reserved.
                     </div>
-                    <div className="text-xs text-slate-500">
-                        Built with React • Tailwind • Framer Motion
+                    <div className="flex gap-6 text-xs text-slate-500 font-medium uppercase tracking-widest">
+                        <Link to="/privacy" className="hover:text-white transition-colors">Privacy</Link>
+                        <Link to="/terms" className="hover:text-white transition-colors">Terms</Link>
                     </div>
                 </div>
             </Container>
