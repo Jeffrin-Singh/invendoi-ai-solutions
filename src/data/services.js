@@ -97,7 +97,7 @@ export const services = [
         title: "Drone & UAV Video Intelligence",
         short:
             "Multi-UAV detection and tracking with telemetry fusion (MAVLink/DJI SDK) and low-bandwidth streaming designs.",
-        image: u("photo-1508614999368-9260051292e5"),
+        image: u("photo-1473968512647-3e447244af8f"),
         highlights: ["Telemetry fusion", "Object tracking", "Low-bandwidth streaming"],
         projectSlugs: ["drone-object-tracking-saudi-cet"],
         details: {

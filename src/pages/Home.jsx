@@ -6,6 +6,7 @@ import WhyChooseUs from "../components/sections/WhyChooseUs.jsx";
 import CaseStudiesPreview from "../components/sections/CaseStudiesPreview.jsx";
 import CTASection from "../components/sections/CTASection.jsx";
 import CurvedLoop from "../components/home/CurvedLoop.jsx"; // ✅ add this
+import ProductExplanation from "../components/sections/ProductExplanation.jsx";
 
 export default function Home() {
     return (
@@ -35,6 +36,7 @@ export default function Home() {
                 </div>
             </section>
 
+            <ProductExplanation />
             <StatsSection />
             <ServicesPreview />
             <WhyChooseUs />

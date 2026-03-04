@@ -6,7 +6,10 @@ export const caseStudies = [
         slug: "lsgd-waste-enforcement-kerala",
         title: "AI-Based Waste Management & Surveillance (LSGD, Kerala)",
         industry: "Government / Municipal Enforcement",
-        heroImage: u("photo-1604187351574-c75ca79f5807"),
+        category: "Government",
+        featured: true,
+        featuredMetric: "2,000+ cameras (scale referenced)",
+        heroImage: u("photo-1523966211575-eb4a01e7dd51"),
         summary:
             "A scalable CCTV analytics deployment that detects waste dumping and cleanliness violations, generates evidence automatically, and routes geo-tagged alerts to enforcement teams—built for ward-level operations and auditing.",
         challenge:
@@ -26,6 +29,9 @@ export const caseStudies = [
         slug: "elephant-detection-forest-corridors",
         title: "Forest Corridor Early Warning: Elephant Detection & Instant Alerts",
         industry: "Government / Forest & Wildlife Monitoring",
+        category: "Wildlife",
+        featured: true,
+        featuredMetric: "200+ detections (pilot referenced)",
         heroImage: u("photo-1501785888041-af3ef285b470"),
         summary:
             "An edge AI early-warning system for elephant movement detection in low-connectivity forest corridors, delivering rapid alerts and field-ready evidence capture.",
@@ -46,6 +52,9 @@ export const caseStudies = [
         slug: "retail-infrastructure-safety",
         title: "Retail & Infrastructure Safety Monitoring",
         industry: "Enterprise Safety",
+        category: "Enterprise",
+        featured: false,
+        featuredMetric: "Designed for control-room workflows",
         heroImage: u("photo-1558008258-3256797b43f3"),
         summary:
             "Multi-camera safety analytics for restricted-zone enforcement, anomaly/fall-type events (where applicable), and early risk detection—integrated with operational dashboards for incident review and escalation.",
@@ -66,6 +75,9 @@ export const caseStudies = [
         slug: "privacy-safe-face-recognition",
         title: "Privacy-Safe Face Recognition (Mediatronix MoU)",
         industry: "Government / Secure Facilities (Governed Use)",
+        category: "Identity",
+        featured: false,
+        featuredMetric: "On-prem / On-edge options",
         heroImage: u("photo-1526374965328-7f61d4dc18c5"),
         summary:
             "A governed face-recognition workflow designed around controlled watchlists, liveness checks, audit trails, and on-prem/on-edge deployment options—built for accountable operations.",
@@ -86,6 +98,9 @@ export const caseStudies = [
         slug: "drone-object-tracking-saudi-cet",
         title: "Drone-based Object Tracking (Saudi Arabia + CET)",
         industry: "UAV / Field Intelligence",
+        category: "UAV",
+        featured: true,
+        featuredMetric: "Telemetry-fused tracking",
         heroImage: u("photo-1473968512647-3e447244af8f"),
         summary:
             "Multi-UAV object detection and tracking with fused telemetry (GPS/altitude), designed for bandwidth constraints and operator workflows—supporting both real-time missions and after-action analysis.",
@@ -102,11 +117,13 @@ export const caseStudies = [
         tech: ["YOLO-based Detection", "Tracking", "Telemetry Fusion", "Low-bandwidth Streaming"],
     },
 
-    // ✅ NEW: Saudi/GCC retail abnormal behavior monitoring
     {
         slug: "saudi-retail-abnormal-behavior-monitoring",
         title: "Abnormal Behavior & Loss-Risk Monitoring (Retail, Saudi Arabia)",
         industry: "Retail / Loss Prevention (GCC)",
+        category: "Enterprise",
+        featured: false,
+        featuredMetric: "Event feed + evidence snippets",
         heroImage: u("photo-1556740738-b6a63e27c4df"),
         summary:
             "A retail-focused video intelligence layer that flags abnormal behavior patterns, restricted-area events, and operational anomalies—creating evidence snippets and streamlined review workflows for loss-prevention teams.",
@@ -123,11 +140,13 @@ export const caseStudies = [
         tech: ["Multi-camera Analytics", "Zone Rules", "Incident Review UX", "Evidence Clips"],
     },
 
-    // ✅ NEW: Multi-site command center + alerts
     {
         slug: "multi-site-command-center-alerting",
         title: "Multi-Site AI Command Center (Dashboards + Real-time Alerts)",
         industry: "Enterprise Command Center",
+        category: "Enterprise",
+        featured: false,
+        featuredMetric: "Incident timeline + camera health",
         heroImage: u("photo-1551288049-bebda4e38f71"),
         summary:
             "A central command-center layer that unifies multi-camera monitoring across sites with event timelines, alert routing, camera health visibility, and role-based access—built for security and operations teams.",
@@ -144,12 +163,14 @@ export const caseStudies = [
         tech: ["RBAC", "Observability Signals", "Event Timelines", "Evidence Workflow"],
     },
 
-    // ✅ NEW: Industrial perimeter intrusion / restricted zones
     {
         slug: "industrial-perimeter-intrusion-zones",
         title: "Industrial Perimeter Intrusion & Restricted-Zone Enforcement",
         industry: "Industrial Safety & Security",
-        heroImage: u("photo-1507668077129-56e32842fceb"),
+        category: "Enterprise",
+        featured: false,
+        featuredMetric: "Alerts + evidence for verification",
+        heroImage: u("photo-1513828583688-c52646db42da"),
         summary:
             "A rule-driven perimeter security analytics layer that detects intrusions, loitering, and restricted-zone breaches—delivering actionable alerts with evidence for site security teams.",
         challenge:
@@ -165,11 +186,13 @@ export const caseStudies = [
         tech: ["Zone Breach Detection", "Loitering/Intrusion Rules", "Evidence Capture", "Dashboards"],
     },
 
-    // ✅ NEW: Law enforcement blueprint/prototype (done work without over-claiming deployment)
     {
         slug: "law-enforcement-ai-surveillance-blueprint",
         title: "AI Surveillance Blueprint for Law Enforcement (Governed Workflows)",
         industry: "Government / Public Safety",
+        category: "Government",
+        featured: false,
+        featuredMetric: "Blueprint + prototype modules",
         heroImage: u("photo-1585079542156-2755d9c8a094"),
         summary:
             "A solution blueprint and prototype modules for law-enforcement-grade video intelligence—focused on governed workflows, evidence handling, and operational dashboards.",
@@ -186,11 +209,13 @@ export const caseStudies = [
         tech: ["RBAC", "Audit Trails", "Evidence Packaging", "Operational Dashboards"],
     },
 
-    // ✅ NEW: Drone incident mapping / geo-analytics ops suite
     {
         slug: "drone-incident-mapping-geo-analytics",
         title: "Drone Incident Mapping & Geo-Analytics (Operations Suite)",
         industry: "UAV Intelligence / Geo-Analytics",
+        category: "UAV",
+        featured: false,
+        featuredMetric: "Timeline + geo-context + exports",
         heroImage: u("photo-1523961131990-5ea7c61b2107"),
         summary:
             "An operations-ready drone analytics suite combining detection events with location context, timelines, and reporting outputs—built for field missions and command-center review.",
