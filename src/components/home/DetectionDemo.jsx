@@ -10,7 +10,7 @@ const SCENES = [
         key: "municipal",
         title: "Municipal Enforcement (CCTV)",
         subtitle: "Waste dumping / violations • Evidence capture",
-        image: u("photo-1523966211575-eb4a01e7dd51"),
+        image: u("photo-1503596476-1c12a8ba09a9"),
         meta: { feed: "RTSP • Ward Cluster", latency: "< 350ms", mode: "Edge + On-prem" },
         boxes: [
             { x: 18, y: 46, w: 28, h: 34, label: "Violation", conf: 0.94, color: "from-indigo-500 to-cyan-400" },
@@ -21,7 +21,7 @@ const SCENES = [
         key: "wildlife",
         title: "Wildlife Early Warning (Edge AI)",
         subtitle: "Forest corridor • Low bandwidth alerts",
-        image: u("photo-1501785888041-af3ef285b470"),
+        image: u("photo-1549366021-9f761d450615"),
         meta: { feed: "Field Camera", latency: "< 500ms", mode: "Edge (Jetson-class)" },
         boxes: [
             { x: 22, y: 45, w: 42, h: 28, label: "Elephant", conf: 0.92, color: "from-emerald-400 to-cyan-400" },
