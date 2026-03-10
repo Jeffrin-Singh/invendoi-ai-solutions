@@ -4,6 +4,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      screens: {
+        'xs': '375px',
+        'mobile': '480px',
+      },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui"],
         display: ["Sora", "Inter", "ui-sans-serif", "system-ui"],

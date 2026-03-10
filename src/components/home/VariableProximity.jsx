@@ -125,15 +125,15 @@ const VariableProximity = forwardRef((props, ref) => {
     return (
         <span
             ref={ref}
-            className={`inline-block ${className} ${onClick ? 'cursor-pointer' : ''}`}
+            className={`inline ${className} ${onClick ? 'cursor-pointer' : ''}`}
             onClick={onClick}
             style={{ fontFamily: "'Roboto Flex', sans-serif" }}
             {...rest}
         >
             <span className="sr-only">{label}</span>
-            <span aria-hidden="true">
+            <span aria-hidden="true" className="inline flex-wrap">
                 {words.map((word, wordIndex) => (
-                    <span key={wordIndex} className="inline-block whitespace-nowrap">
+                    <span key={wordIndex} className="inline-block sm:whitespace-nowrap">
                         {word.split("").map((letter, letterIndex) => {
                             const index = words
                                 .slice(0, wordIndex)
@@ -155,7 +155,7 @@ const VariableProximity = forwardRef((props, ref) => {
                                 </span>
                             );
                         })}
-                        {wordIndex < words.length - 1 && <span>&nbsp;</span>}
+                        {wordIndex < words.length - 1 && <span className="inline-block">&nbsp;</span>}
                     </span>
                 ))}
             </span>
