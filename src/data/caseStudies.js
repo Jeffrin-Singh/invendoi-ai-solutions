@@ -9,7 +9,7 @@ export const caseStudies = [
         category: "Government",
         featured: true,
         featuredMetric: "2,000+ cameras (scale referenced)",
-        heroImage: u("photo-1523966211575-eb4a01e7dd51"),
+        heroImage: u("photo-1503596476-1c12a8ba09a9"),
         summary:
             "A scalable CCTV analytics deployment that detects waste dumping and cleanliness violations, generates evidence automatically, and routes geo-tagged alerts to enforcement teams—built for ward-level operations and auditing.",
         challenge:
@@ -32,7 +32,7 @@ export const caseStudies = [
         category: "Wildlife",
         featured: true,
         featuredMetric: "200+ detections (pilot referenced)",
-        heroImage: u("photo-1501785888041-af3ef285b470"),
+        heroImage: u("photo-1549366021-9f761d450615"),
         summary:
             "An edge AI early-warning system for elephant movement detection in low-connectivity forest corridors, delivering rapid alerts and field-ready evidence capture.",
         challenge:
