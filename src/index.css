@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-slate-100 font-sans antialiased;
+    background-color: #0b1220;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.18) 0%, transparent 40%),
+      radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.14) 0%, transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.10) 0%, transparent 60%);
+    background-attachment: fixed;
+  }
+
+  /* Remove forced light mode styles */
+  p {
+    @apply text-slate-300/80;
+  }
+
+  ::selection {
+    background: rgba(99, 102, 241, 0.4);
+    color: white;
+  }
+
+  /* Clean up transitions as we are now dark-first */
+  * {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  }
+
+  .grid-overlay {
+    background-image: radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.1) 1px, transparent 0);
+    background-size: 32px 32px;
+  }
+}
