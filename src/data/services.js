@@ -6,16 +6,24 @@ export const services = [
         slug: "real-time-video-analytics",
         title: "Real-time Video Analytics",
         short:
+<<<<<<< HEAD
             "Object, crowd and behavioral detection across CCTV, drones, body-cams and mobile streams—optimized for control rooms, including high-security deployments for VSSC and Kerala Defence.",
         image: "/1.png",
+=======
+            "Object, crowd and behavioral detection across CCTV, drones, body-cams and mobile streams—optimized for control rooms.",
+        image: u("photo-1550751827-4bd374c3f58b"),
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
         highlights: [
             "Crowd/loitering/zone breach detection",
             "Anomaly & incident alerts with evidence snapshots",
             "Multi-stream performance built for scale",
         ],
         projectSlugs: [
+<<<<<<< HEAD
             "vccs-fr-system",
             "kerala-defence-fr-project",
+=======
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
             "lsgd-waste-surveillance-kerala",
             "elephant-detection-early-warning",
             "retail-infrastructure-safety-monitoring",
@@ -25,7 +33,11 @@ export const services = [
             problem:
                 "Operators can’t watch thousands of feeds continuously. Missed incidents become delayed response and weak evidence.",
             solution:
+<<<<<<< HEAD
                 "We convert live video into real-time alerts, searchable evidence, and operational dashboards—so teams act faster with confidence across enterprise, government, and high-security surveillance environments.",
+=======
+                "We convert live video into real-time alerts, searchable evidence, and operational dashboards—so teams act faster with confidence.",
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
             deliverables: [
                 "Detection models tuned to your environment",
                 "Alert rules, zones and schedules",
@@ -41,6 +53,7 @@ export const services = [
         },
     },
     {
+<<<<<<< HEAD
         slug: "ai-agents-automation",
         title: "AI Agents & Business Process Automation",
         short:
@@ -67,6 +80,8 @@ export const services = [
         },
     },
     {
+=======
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
         slug: "edge-ai-deployment",
         title: "Edge AI Deployment (Jetson / GPU)",
         short:
@@ -192,6 +207,7 @@ export const services = [
         slug: "face-recognition-access",
         title: "Face Recognition & Secure Access (Privacy-safe)",
         short:
+<<<<<<< HEAD
             "AI CCTV detection and face recognition for high-security environments with watchlists, liveness checks, on-prem/on-edge inference, and tamper-proof audit trails.",
         image: u("photo-1556157382-97eda2d62296"),
         highlights: ["High-security CCTV monitoring", "Watchlists & identity workflows", "On-prem / edge deployment"],
@@ -213,6 +229,25 @@ export const services = [
                 "Faster identification and response",
                 "Accountable and controlled operations",
             ],
+=======
+            "Watchlists, liveness checks, on-prem/on-edge inference, tamper-proof audit trails—aligned to lawful use.",
+        image: u("photo-1556157382-97eda2d62296"),
+        highlights: ["Watchlists", "Liveness checks", "On-prem / edge inference"],
+        projectSlugs: ["privacy-safe-face-recognition"],
+        details: {
+            problem:
+                "Secure facilities require strong identity verification with governance, privacy, and auditability.",
+            solution:
+                "We implement privacy-safe face recognition flows with controlled watchlists and tamper-proof logging.",
+            deliverables: [
+                "Access policy + SOP design",
+                "Watchlist & role controls",
+                "Liveness + 1:N identification flow",
+                "Redaction/export workflows + audit trails",
+            ],
+            tech: ["On-edge Inference", "RBAC", "Audit Trails"],
+            outcomes: ["Improved security posture", "Accountable operations", "Controlled data usage"],
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
         },
     },
     {
@@ -231,7 +266,11 @@ export const services = [
             problem:
                 "AI systems fail when alerts don’t fit real operations or can’t integrate with existing stacks.",
             solution:
+<<<<<<< HEAD
                 "We design portals and APIs that match real operational workflows: roles, approvals, audit, exports, law-enforcement integrations, and secure evidence handling.",
+=======
+                "We design portals and APIs that match workflows: roles, approvals, audit, exports, and integrations.",
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
             deliverables: [
                 "Portal UX for operators/admins",
                 "RBAC, 2FA, audit trail design",

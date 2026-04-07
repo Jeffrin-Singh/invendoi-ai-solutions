@@ -113,7 +113,11 @@ export default function Hero() {
                         >
                             Deploy on CCTV, Jetson-class edge devices, or secure servers. Detect incidents in real time, generate
                             evidence automatically, and route geo-tagged alerts to teams—built for scale, low bandwidth, and
+<<<<<<< HEAD
                             accountable workflows. Our experience includes high-security AI deployments for Kerala Defence and VSSC.
+=======
+                            accountable workflows.
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
                         </motion.p>
 
                         {/* DetectionDemo — mobile/tablet only, aligned to left content edge */}
@@ -165,7 +169,10 @@ export default function Hero() {
                     className="mt-8 sm:mt-10 flex flex-wrap gap-2"
                 >
                     {[
+<<<<<<< HEAD
                         "Kerala Defence + VSSC projects",
+=======
+>>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
                         "2,000+ camera-scale referenced",
                         "200+ wildlife detections referenced",
                         "Field-tested UAV tracking",
