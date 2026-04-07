@@ -9,7 +9,7 @@ export const caseStudies = [
         category: "Identity",
         featured: true,
         featuredMetric: "Watchlists + audit-ready workflows",
-        heroImage: u("photo-1526374965328-7f61d4dc18c5"),
+        heroImage: "/1.png",
         summary:
             "A high-security face recognition system designed for CCTV-based monitoring, controlled watchlists, and secure identity workflows with on-prem deployment options and traceable audit logs.",
         challenge:
@@ -32,7 +32,7 @@ export const caseStudies = [
         category: "Identity",
         featured: true,
         featuredMetric: "On-prem identity intelligence",
-        heroImage: u("photo-1516321497487-e288fb19713f"),
+        heroImage: "/3.jpg",
         summary:
             "A defence-oriented face recognition and CCTV intelligence workflow designed for secure perimeters, identity verification, watchlist matching, and real-time alerting under controlled on-prem operations.",
         challenge:

@@ -26,7 +26,7 @@ export default function Home() {
                 <div className="mx-auto max-w-6xl px-4">
                     {/* If you feel it's too big, reduce text size in CurvedLoop (svg class) */}
                     <CurvedLoop
-                        marqueeText="Invendoi AI Solutions • Edge AI • Real-time Video Analytics • Multi-Camera Intelligence • UAV Tracking • Geospatial Intelligence •"
+                        marqueeText="Invendoi AI Solutions • Applied AI • Edge AI • Real-time Video Analytics • AI Agents • Face Recognition • Multi-Camera Intelligence"
                         speed={1.6}
                         curveAmount={0}
                         direction="left"
