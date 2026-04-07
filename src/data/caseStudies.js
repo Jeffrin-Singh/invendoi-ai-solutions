@@ -3,7 +3,6 @@ const u = (id) =>
 
 export const caseStudies = [
     {
-<<<<<<< HEAD
         slug: "vccs-fr-system",
         title: "VCCS Face Recognition System for Secure Access & Monitoring",
         industry: "Government / High-Security Facilities",
@@ -50,8 +49,6 @@ export const caseStudies = [
     },
 
     {
-=======
->>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
         slug: "lsgd-waste-enforcement-kerala",
         title: "AI-Based Waste Management & Surveillance (LSGD, Kerala)",
         industry: "Government / Municipal Enforcement",
@@ -283,8 +280,4 @@ export const caseStudies = [
 ];
 
 export const getCaseStudyBySlug = (slug) =>
-<<<<<<< HEAD
     caseStudies.find((c) => c.slug === slug);
-=======
-    caseStudies.find((c) => c.slug === slug);
->>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0

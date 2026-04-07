@@ -7,7 +7,6 @@ const u = (id) =>
 
 const SCENES = [
     {
-<<<<<<< HEAD
         key: "vssc",
         title: "VSSC High-Security Surveillance",
         subtitle: "Secure facility monitoring • AI-based detection",
@@ -42,8 +41,6 @@ const SCENES = [
         ],
     },
     {
-=======
->>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
         key: "municipal",
         title: "Municipal Enforcement (CCTV)",
         subtitle: "Waste dumping / violations • Evidence capture",
@@ -54,30 +51,6 @@ const SCENES = [
             { x: 56, y: 52, w: 18, h: 20, label: "Object", conf: 0.89, color: "from-fuchsia-500 to-indigo-500" },
         ],
     },
-<<<<<<< HEAD
-=======
-    {
-        key: "wildlife",
-        title: "Wildlife Early Warning (Edge AI)",
-        subtitle: "Forest corridor • Low bandwidth alerts",
-        image: u("photo-1549366021-9f761d450615"),
-        meta: { feed: "Field Camera", latency: "< 500ms", mode: "Edge (Jetson-class)" },
-        boxes: [
-            { x: 22, y: 45, w: 42, h: 28, label: "Elephant", conf: 0.92, color: "from-emerald-400 to-cyan-400" },
-        ],
-    },
-    {
-        key: "uav",
-        title: "UAV Tracking (Telemetry-Fused)",
-        subtitle: "Object tracking • Mission timeline",
-        image: u("photo-1473968512647-3e447244af8f"),
-        meta: { feed: "Drone Stream", latency: "< 450ms", mode: "Hybrid (Edge + Server)" },
-        boxes: [
-            { x: 54, y: 48, w: 22, h: 26, label: "Target", conf: 0.90, color: "from-cyan-400 to-indigo-500" },
-        ],
-        telemetry: { gps: "24.7131, 46.6753", alt: "118m", speed: "22 km/h" },
-    },
->>>>>>> 35cfd41a92f773fee5bf4d3791ed528312f963d0
 ];
 
 function clamp01(n) {

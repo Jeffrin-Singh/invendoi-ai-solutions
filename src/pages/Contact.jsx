@@ -37,7 +37,7 @@ export default function Contact() {
                                 <div className="p-10 bg-white/[0.03] shadow-2xl shadow-transparent h-full border border-white/5 rounded-[40px]">
                                     <h3 className="font-display text-2xl text-white mb-2">Send an Inquiry</h3>
                                     <p className={`text-sm ${theme.mutedText} leading-relaxed mb-10`}>
-                                        Tell us about your operational environment (cameras, UAVs, etc.) and your tactical goals.
+                                        Tell us about your operational environment (cameras, UAVs , etc.) and your tactical goals.
                                     </p>
 
                                     <div className="grid gap-6 sm:grid-cols-2">
